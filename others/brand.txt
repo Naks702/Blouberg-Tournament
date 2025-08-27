@@ -1,0 +1,8 @@
+colors of our branding
+
+#f48a2c
+#b4144c
+#ba1454
+#f4982b
+#f47823
+#f87048
