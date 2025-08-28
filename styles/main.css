@@ -1,0 +1,35 @@
+body{
+    background-color:#f8c69a ;
+}
+
+.mainNavContainer {
+     display: flex;
+     margin: 5px;
+     flex-direction: row;
+      justify-content: center;
+     
+}
+.mainNavContainer a {
+    color: white; 
+    margin: 5px;
+    background-color: rgba(255, 168, 6, 0.63);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+header{
+    background-color: antiquewhite;
+}
+
+#logo{
+
+    width:150px; 
+    height:auto;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    max-width: 100%;
+}
