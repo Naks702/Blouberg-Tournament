@@ -5,6 +5,7 @@ body{
 .mainNavContainer {
      display: flex;
      margin: 5px;
+     gap: 20px;
      flex-direction: row;
       justify-content: center;
      
@@ -21,15 +22,52 @@ body{
 }
 header{
     background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.h1headers{
+    background-color:#f8c69a ;
+    display: flex;
+    fl;
 }
 
 #logo{
 
-    width:150px; 
+    width:60px; 
     height:auto;
     margin: 0;
     padding: 0;
     display: grid;
     place-items: center;
     max-width: 100%;
+}
+.form-containers{
+    display: flex;
+    
+   
+}
+form{
+    border: 20px;
+    padding: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+input{
+    width: 100%;
+    border-radius: 15px;
+    height: 28px;
+    padding: 2px;
+    border: 2px solid ;
+    text-align: center;
+
+}
+input[type = submit ]{
+ cursor: pointer;
+ width: 10%;
+ margin: 5px;
+ text-align: center;
 }

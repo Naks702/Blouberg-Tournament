@@ -6,26 +6,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Enquiry</title>
         <link rel="icon" type="image/x-icon" href="./images/icons/favicon-96x96.png">
+             <link rel="stylesheet" href="./styles/main.css">
        
     </head>
     <body>
         <header>
-            <img src="./images/logos/blouberg.png" max-height="70px" width="150px" height="auto">
-            <h1>Enquire about our Tournament</h1>
-        <nav>
+        <div class="logo">
+              <img src="./images/logos/blouberg.png" id="logo" >
+         </div>
+         <nav>
+         <div class="mainNavContainer"> 
                 <a href="./Index.html">Home</a>
                 <a href="./AboutUs.html">About Us</a>
                 <a href="./Services.html">Services</a>
                 <a href="./Enquiry.html">Enquiry</a>
-                <a href="./ContactUs.html">Contact Us</a>   
+                <a href="./ContactUs.html">Contact Us</a>  
+               
+        </div>
+                
         </nav>
+             
+            
+        
 
         </header>
         <main>
-         
+         <div class="h1headers"><h1>Enquire about our Tournament</h1></div>
             <section>
                 <!-- we will have two forms that one for community members who want info and one for sponsors who want to sponsor events  -->
-                <h2>Enquiry form</h2>
+                
+                <div class="form-containers">
+                    <div class="formsClass">
+                         <div id="enquiryForm">
+                  <h2>Enquiry form</h2>      
                 <p>Join us in this journey of entertainment. Send any suggestion, enquiries and participation reguest </p>
                  <form action="" method="get" id="enquiryForm">
                    <label for="First Name">Last Name
@@ -43,16 +56,22 @@
                    <label for="Company Name" id="companyName">Company Name
                     <input type="text" id="companyName"><br>
                    </label>
-                    <input type="submit">
+                    <input type="submit" class="formSubmitBtns">
                   
                    <br>
                    <br>
                     
-                 </form>
+                 </form> 
+                    </div>
+                  
+                    </div>
+                  <div id="sponsorForm">
+                    <h2>Sponsorship form</h2>
+
                  <!-- Sponsorship form -->
                   <!-- we affix the the character sp to make it distinct with the other forms -->
 
-                  <h2>Sponsorship form</h2>
+                  
                 <p>Join us in this journey of empowerment.  </p>
                  <form id="sponsorForm">
                     <input type="text" id="splastName">
@@ -69,9 +88,13 @@
                    <label for="Company Name" id="spCompanyName">Company Name
                     <input type="text" id="spCompanyName"><br>
                    </label>
-                    <input type="submit">
+                    <input type="submit" class="formSubmitBtns">
                   
                  </form>
+                  </div>
+                
+                </div>
+                
             </section>
             
              <footer>
