@@ -1,5 +1,7 @@
 body{
     background-color:#f8c69a ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 .mainNavContainer {
@@ -30,7 +32,7 @@ header{
 .h1headers{
     background-color:#f8c69a ;
     display: flex;
-    fl;
+   
 }
 
 #logo{
