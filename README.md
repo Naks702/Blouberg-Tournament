@@ -63,3 +63,7 @@ f.	Next month week 2: Go Live
 a.	Costs: R 3000
 b.	Annual domain registration: R100
 c.	Monthly hosting fee  R99 Afrihost
+
+
+
+//part 2

@@ -1,0 +1,15 @@
+.container{
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+
+}
+.container > div{
+   
+    text-align: center;
+    border: 2px solid red;
+    font-weight: 20%;
+    background-color: aqua;
+
+}
