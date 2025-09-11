@@ -27,21 +27,28 @@ body{
  
  
     }
-    nav{
+   .mainNavContainer{
 
      gap: 1rem;
      flex-direction: column;
     align-items: center;
-    color: red;
+    background-color: #333;
     padding: 1rem;
     position: absolute;
-    top: 60px;
+    top: 70px;
+    right: 0;
     width: 200px;
+    display: none;
 
 }
-.logo{
-    position: sticky;
+
+#mobi-menu:checked ~.mainNavContainer{
+    display: flex;
 }
+.mobi-menuIcon{
+  display: block;
+}
+
 }
 a:link{
     cursor: pointer;
@@ -55,7 +62,8 @@ a:link{
      
 }
 .mainNavContainer a:hover{
-color: black;
+    background-color:#f1750f ;
+
 }
 .mainNavContainer a {
     color: white; 
@@ -77,6 +85,7 @@ header{
 .h1headers{
     background-color:#f8c69a ;
     display: flex;
+ 
    
 }
 
@@ -92,9 +101,11 @@ header{
 }
 .form-containers{
     display: grid;
-    column-gap: 100px;
-    grid-template-columns: auto auto auto auto;
+    column-gap: 150px;
+    grid-template-columns: 25% 30% ;
     padding: 0px;
+    /* will activate them later  */
+    display: none;
 }
 .form-containers > div{
     border: 1px red;
@@ -103,15 +114,19 @@ header{
 form{
     border: 20px;
     padding: auto;
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     justify-content: space-between;
+   
     
 
 }
-#sponsorForm, #enquiryForm{
-    width: 75%;
+.form-containers{
+ margin-left: 10px;
 }
+/* #sponsorForm, #enquiryForm{
+    width: 75%;
+} */
 input{
 
     height: 28px;
@@ -155,4 +170,26 @@ input[type = submit ]{
 }
 .formSubmitBtns{
     display: block;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* only for desktop to control transition on Nav toogle items  * for desktop and laptop */
+@media only screen and (min-width:1024px){
+
+    .menuMobiDiv{
+    display: none;
+}
+}
+.container-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: auto;
 }
