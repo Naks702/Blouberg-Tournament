@@ -158,16 +158,16 @@ input[type = submit ]{
     border: 2px solid red;
     font-weight: 20%;
 }
-.article-Container{
+.article-Container {
     display: grid;
     column-gap: 100px;
     grid-template-columns: auto auto auto;
     padding: 10px;
 }
-.article-Container >div{
+/* .article-Container >div{
     border:red solid 3px;
 
-}
+} */
 .formSubmitBtns{
     display: block;
 }
@@ -192,4 +192,25 @@ img{
   gap: 1rem;
   max-width: 1200px;
   margin: auto;
+}
+.aboutUsDiv{
+    /* display: flex;   
+    box-shadow: #333333;
+    flex: 3;
+    min-width: 100%;
+    max-width: 30%; */
+}
+.mainDiv{
+      display: block;
+    column-gap: 5px;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+.card1{
+
+}
+.containerServices{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
