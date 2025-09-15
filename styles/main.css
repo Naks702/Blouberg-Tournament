@@ -194,11 +194,14 @@ img{
   margin: auto;
 }
 .aboutUsDiv{
-    /* display: flex;   
+    display: flex;   
     box-shadow: #333333;
     flex: 3;
     min-width: 100%;
-    max-width: 30%; */
+    max-width: 30%;
+    border: #f1750f 5px solid;
+    overflow: auto;
+  
 }
 .mainDiv{
       display: block;
@@ -213,4 +216,11 @@ img{
     display: flex;
     flex-direction: row;
     gap: 20px;
+}
+#Welcome0{
+ float:left;
+}
+#Welcome1{
+ float:right;
+ padding: 5px;
 }
