@@ -118,6 +118,11 @@ form{
     /* display: flex; */
     flex-wrap: wrap;
     justify-content: space-between;
+     box-shadow: 4px 4px 8px;
+     padding: 20px;
+     margin-bottom: 12px;
+     border-radius: 12px;
+     margin-top: 10px;
    
     
 
@@ -221,13 +226,7 @@ img{
     flex-direction: row;
     gap: 20px;
 }
-#Welcome0{
- float:left;
-}
-#Welcome1{
- float:right;
- padding: 5px;
-}
+
 .logosDiv{
     display: flex;
     column-gap: 10px;
@@ -241,26 +240,35 @@ img{
 .map{
     border: #f1750f solid 2px;
     display: flex;
-    gap: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+  justify-content: space-between;
     align-items: flex-start;
+    margin: 20px 0 10px;
+    
     
 }
 .map>div,
 .map iframe{
- flex: 1;
+ flex: 1 1 300px;
  max-width: 400px;
  min-width: 250px;
+ 
 }
 .contact-info{
  font-size: 1rem;
 border-radius: 10px;
 border: 1px solid ;
 padding: 10px;
- 
+margin-top: 10px;
+box-shadow: 4px 4px 8px;
 
 }
 .socialMediaContainer{
  width: 40px;
  display: flex;
  gap: 20px;
+}
+map{
+    border: #f1750f solid;
 }
