@@ -67,3 +67,10 @@ c.	Monthly hosting fee  R99 Afrihost
 
 
 //part 2
+
+//Changes
+We change enquiry page from equiry to tournament page since we have multiple tournament to showcase, enquiry froms will be hosted underneath contact us page as 
+it contains relevant info and people go to the page to get contact details therefore can also send us quiries via this form
+
+//
+added social media from this side: https://www.flaticon.com/free-icons/social-media
