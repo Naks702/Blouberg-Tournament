@@ -7,6 +7,7 @@
 body{
     background-color:#f8c69a ;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2rem;
     
 }
 @media only screen and (max-width:768px){
@@ -323,11 +324,16 @@ margin-left: 50px;
 
 .articles, .article-three, .article-four{
     border-radius: 10px;
-    border: #f1750f solid 2px;
+    border: #f1750f solid 3px;
     box-shadow: 4px 4px 4px 4px rgba(255, 168, 6, 0.63);
 }
 .articles, .article-three, .article-four h2{
     color:white;
     text-align: center;
     margin-top: 10px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    
 }
