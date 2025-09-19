@@ -10,6 +10,7 @@ body{
     line-height: 2rem;
     
 }
+/* mobile screens */
 @media only screen and (max-width:768px){
     body{
        font-size: 60%;
@@ -29,17 +30,16 @@ body{
  
     }
    .mainNavContainer{
-
-     gap: 1rem;
-     flex-direction: column;
+    gap: 1rem;
+    flex-direction: row;
     align-items: center;
-    background-color: #333;
     padding: 1rem;
     position: absolute;
     top: 70px;
     right: 0;
     width: 200px;
-    display: none;
+    font-size: 1rem;
+    line-height: 1rem;
 
 }
 
@@ -51,6 +51,8 @@ body{
 }
 
 }
+
+/* normal screen */
 a:link{
     cursor: pointer;
 }
@@ -347,4 +349,9 @@ a {
     grid-template-columns: auto auto;
     gap: 50px;
     justify-content: space-between;
+    grid-template-areas:'container-footer' ;
+}
+#tourneyBtn{
+    border-radius: 5px;
+    padding: 5px;
 }
