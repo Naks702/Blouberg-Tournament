@@ -238,6 +238,10 @@ img{
     flex-direction: column;
     grid-template-columns: auto auto auto;
 }
+main{
+    border: #f1750f solid 1px;
+    margin: 50px;
+}
 
 /* contact us style */
 
@@ -336,4 +340,11 @@ a {
     text-decoration: none;
     color: inherit;
     
+}
+/* tournament page */
+.tournaments{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    justify-content: space-between;
 }
