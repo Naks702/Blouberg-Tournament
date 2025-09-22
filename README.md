@@ -74,3 +74,10 @@ it contains relevant info and people go to the page to get contact details there
 
 //
 added social media from this side: https://www.flaticon.com/free-icons/social-media
+
+navigatioon Menu
+we have two set of menu, one set is for desktop >1024px while the other set is for smaller screen <1023
+We will then switch between the two menu depending on the device. We planning to use Javascript to use hamburger menu once we implemented Javascript
+
+Logo
+will be adjusted to be reponsive as per device

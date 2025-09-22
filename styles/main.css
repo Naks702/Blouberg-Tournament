@@ -20,17 +20,29 @@ a:link{
     cursor: pointer;
 }
 .mainNavContainer {
-     display: flex;
+     display: grid;
      margin: 5px;
      gap: 20px;
      flex-direction: row;
-      justify-content: center;
+     grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(255, 168, 6, 0.63);
+
      
 }
 .mainNavContainer a:hover{
     background-color:#f1750f ;
 
 }
+
 .mainNavContainer a {
     color: white; 
     margin: 5px;
@@ -152,7 +164,7 @@ img{
     height: auto;
 }
 
-/* tablet and small laptop screens */
+/* tablet and small laptop screens
     .form-containers{
         display: block;
         margin: auto;
@@ -184,10 +196,7 @@ img{
         width: 100%;
         margin-bottom: 20px;
     }
-    .mainNavContainer {
-        display: block;
-        
-    }
+    */
     .minigallery{
         display: block;
         margin: auto;
@@ -393,12 +402,30 @@ a {
 /* mobile screens */
 
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:1023px){
     body{
        font-size: 60%;
-       font-size: 1.2rem;
+       font-size: 0.9rem;
 
     }
+    .mobileNav{  
+    gap: 1rem;
+    padding: 1rem;
+    position: absolute;
+   
+    }
+    .mobileNavContainer{
+        display:flex;
+        width: 200px;
+        height: auto;
+       font-size: 1rem;
+        line-height: 1rem;
+    }
+  
+}
+
+
+
     input[type = submit ]{
  margin: 5px;
  text-align: center;
@@ -414,7 +441,7 @@ a {
     }
    .mainNavContainer{
     gap: 1rem;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     padding: 1rem;
     position: absolute;
@@ -432,11 +459,25 @@ a {
 .mobi-menuIcon{
   display: block;
 }
-
+img{
+    max-width: 100%;
+    height: auto;
+    
 }
+
+
+@media(min-width:375px){
+ img{
+    width: 100%;
+    height: auto;
+ }
+}
+
+
 @media only screen and (min-width:1024px){
 
     .menuMobiDiv{
     display: none;
 }
+
 }
