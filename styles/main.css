@@ -20,18 +20,16 @@ a:link{
     cursor: pointer;
 }
 .mainNavContainer {
-     display: grid;
+     display: flex;
      margin: 5px;
      gap: 20px;
      flex-direction: row;
-     grid-template-columns: 1fr 1fr;
     justify-content: center;
     font-size: 1rem;
     line-height: 1rem;
     position: absolute;
     top: 70px;
     right: 0;
-    background: #fff;
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 4px 4px 4px rgba(255, 168, 6, 0.63);
@@ -53,6 +51,7 @@ a:link{
     border-radius: 25px;
     font-size: 1rem;
     text-decoration: none;
+    text-align: center;
 }
 /* keep header on top of other elements */
 
@@ -441,7 +440,7 @@ a {
     }
    .mainNavContainer{
     gap: 1rem;
-    flex-direction: column;
+
     align-items: center;
     padding: 1rem;
     position: absolute;
