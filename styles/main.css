@@ -24,16 +24,17 @@ a:link{
      margin: 5px;
      gap: 20px;
      flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     font-size: 1rem;
     line-height: 1rem;
     position: absolute;
-    top: 70px;
-    right: 0;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    top: 20px;
+    right: 100px;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 4px 4px 4px rgba(255, 168, 6, 0.63);
-
+   
      
 }
 .mainNavContainer a:hover{
@@ -225,10 +226,7 @@ img{
   align-items: center;
   gap: 1rem;
   max-width: 1200px;
-  margin: auto;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
+  margin: 40px auto 0 auto;
   background-color: orange;
 }
 .aboutUsDiv{
@@ -299,9 +297,9 @@ border: red 3px solid;
 
 }
 .socialMediaContainer{
- width: 40px;
+ width: 30px;
  display: flex;
- gap: 20px;
+ gap: 10px;
 }
 
 .map iframe{
@@ -341,8 +339,8 @@ width:50%;
  display: flex;
 }
 .minigallery{
-width: 300px;
-height: 300px;
+width: 10%;
+height: auto;
 display: block;
 margin-left: 50px;
 
@@ -400,31 +398,6 @@ a {
 /* tablet and small laptop screens */
 /* mobile screens */
 
-
-@media only screen and (max-width:1023px){
-    body{
-       font-size: 60%;
-       font-size: 0.9rem;
-
-    }
-    .mobileNav{  
-    gap: 1rem;
-    padding: 1rem;
-    position: absolute;
-   
-    }
-    .mobileNavContainer{
-        display:flex;
-        width: 200px;
-        height: auto;
-       font-size: 1rem;
-        line-height: 1rem;
-    }
-  
-}
-
-
-
     input[type = submit ]{
  margin: 5px;
  text-align: center;
@@ -433,14 +406,12 @@ a {
  margin-bottom: 10px;
  padding: 8px 5px;
  display: block;
-
  border-radius: 25px;
  
  
     }
    .mainNavContainer{
     gap: 1rem;
-
     align-items: center;
     padding: 1rem;
     position: absolute;
@@ -465,18 +436,18 @@ img{
 }
 
 
-@media(min-width:375px){
+@media(max-width:600px){
  img{
     width: 100%;
     height: auto;
  }
+ .mainNavContainer{
+   display: grid;
+
+ }
+ 
 }
 
 
-@media only screen and (min-width:1024px){
 
-    .menuMobiDiv{
-    display: none;
-}
 
-}
