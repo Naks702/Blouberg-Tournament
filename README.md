@@ -81,3 +81,9 @@ We will then switch between the two menu depending on the device. We planning to
 
 Logo
 will be adjusted to be reponsive as per device
+
+Mobile device optimisations
+![alt text](image.png)
+
+
+for easy refence i upload mobile optimisation in a folder \Blouberg-Tournament\images\mobileOptimisaScreenshot
