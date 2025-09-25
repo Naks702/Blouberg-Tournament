@@ -82,6 +82,7 @@ header{
     position: relative;
     /* z-index: 1000; */
     width: 80px;
+    margin-bottom: 10px;
     height: auto;
 }
 .form-containers{
@@ -435,14 +436,23 @@ img{
     
 }
 
-
+.menuMobiDiv{
+    display: none;
+}
 @media(max-width:600px){
  img{
     width: 100%;
     height: auto;
  }
  .mainNavContainer{
-   display: grid;
+  display: grid;
+  flex-direction: row;
+  align-items: flex-end;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  padding: 10px;
+  z-index: 999;
 
  }
  
