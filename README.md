@@ -87,3 +87,25 @@ Mobile device optimisations
 
 
 for easy refence i upload mobile optimisation in a folder \Blouberg-Tournament\images\mobileOptimisaScreenshot
+
+Based on the feedback or rubric the following item needs to be addressed
+
+Some vague comments added but does not explain fully 
+-add comments on css for different page
+-
+-
+-
+
+Content is missing or irrelevant. 
+- added a new page called tournament
+- add more content on service page 
+- add images
+
+Budget is vague or unrealistic. 
+- Website development cost R3000
+- website maintainance cost R700 per month
+
+
+Timeline is vague or unrealistic 
+-
+-

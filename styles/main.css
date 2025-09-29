@@ -209,7 +209,7 @@ img{
     display: none;
 }
 
-/* icon hamburger menu*/
+/* icon hamburger menu this css will be made functional with the use of Javascript*/
 
 .checkbtn{
     font-size: 30px;
@@ -398,9 +398,10 @@ a {
     height: auto;
 }
 .column1 :last-child{
- margin-right:20px ;
+ margin-right:10px ;
  max-width: 100%;
 }
+
 
 /* service page style */
 
@@ -418,10 +419,6 @@ a {
 }
 
 
-/* mobile only style */
-
-/* tablet and small laptop screens */
-/* mobile screens */
 
     input[type = submit ]{
  margin: 5px;
@@ -463,6 +460,7 @@ img{
 .menuMobiDiv{
     display: none;
 }
+/* for small screens and mobile phones */
 @media(max-width:600px){
  img{
     width: 100%;
