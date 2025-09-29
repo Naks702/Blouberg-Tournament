@@ -69,6 +69,7 @@ c.	Monthly hosting fee  R99 Afrihost
 //part 2
 
 //Changes
+
 We change enquiry page from equiry to tournament page since we have multiple tournament to showcase, enquiry froms will be hosted underneath contact us page as 
 it contains relevant info and people go to the page to get contact details therefore can also send us quiries via this form
 
@@ -109,3 +110,28 @@ Budget is vague or unrealistic.
 Timeline is vague or unrealistic 
 -
 -
+
+ 2025-09-17
+new page called tournament page was added
+ 
+2025-09-20
+Changes on tournament page
+
+ 2025-09-17
+social media icons added and will be linked soon
+
+navigatioon Menu
+navigation menu was adjusted for mobile device
+
+ 2025-09-24
+Content changes - More images added
+
+
+2025-09-25
+mobile website optimisation testing
+
+ 2025-09-28
+change applied to the website based on feedback
+
+ 2025-09- 28
+testing website accross different browsers
