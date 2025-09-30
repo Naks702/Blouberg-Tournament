@@ -12,7 +12,10 @@
         <body>
         <header>
              <div class="logo">
-              <img src="./images/logos/blouberg.png" id="logo" >
+              <img src="./images/logos/blouberg.png" id="logo"
+               srcset="images/logos/blouberg.png 2x, images/logos/blouberg.png 3x,"
+               alt="Logo"
+              >
          </div>
           
        
@@ -31,18 +34,21 @@
         </nav>
 
         </header>
-        <main>
+      
+        <main id ="mobileMain">
+
+          <!-- this is where we will put a slideshows / gallery of images -->
          <div class="row">
           <div class="column">
                 <picture id="HomepageStickerImg">
-          <source srcset="pexels-thato-moiketsi-909645793-32422417.jpg" media="(max-width: 400px)">
+          <source srcset="pexels-thato-moiketsi-909645793-32422417.jpg" media="(max-width: 100%)">
           
-          <img src="./images/pexels-thato-moiketsi-909645793-32422417.jpg" class="HomepageStickerImg">
+          <img src="./images/website gallery/pexels-thato-moiketsi-909645793-32422417.jpg" class="HomepageStickerImg">
          </picture>
          <picture id="HomepageStickerImg">
-          <source srcset="pexels-thato-moiketsi-909645793-32422417.jpg" media="(max-width: 400px)">
+          <source srcset="pexels-thato-moiketsi-909645793-32422417.jpg" media="(max-width: 100%)">
           
-          <img src="./images/pexels-chris-wade-ntezicimpa-564856410-31105911.jpg" class="HomepageStickerImg">
+          <img src="./images/website gallery/pexels-rdne-7188044.jpg" class="HomepageStickerImg">
          </picture>
           </div>
       
@@ -74,8 +80,9 @@
                     <a href="#">
                 <h2>Blogs and News</h2>
                 
-                <img src="./images/news.png" class="minigallery">
+                <img src="./images/icons/news.png" class="minigallery">
                     </a>
+                    
              </article>
              
                </div>
@@ -84,21 +91,19 @@
               <a href="#">
                 <h2>Live matches</h2>
                 
-                <img src="./images/football.png"   class="minigallery">
+                <img src="./images/icons/football.png"   class="minigallery">
                 </a>
              </article>
                </div>
-            <div>
+            
               <article class="article-four"> 
                 <a href="#">
                 <h2>match results</h2>
-                   <img src="./images/score.png"class="minigallery">
+                   <img src="./images/icons/score.png"class="minigallery">
                 </a>
             
               </article>
-
-             </div>
-                     <div>
+              <div>
               <article class="article-five">
                 <a href="#">
                 <h2>Gallery</h2>
@@ -107,12 +112,16 @@
               
             </div>
              
+             
             
-              
+             </div>
+             
+            
+              <!-- footer -->
            <div class="container-footer">
                <footer>
                <div><p>&copy; 2025 Blouberg. All Rights reserved</p></div>
-                <div><p>social media pages</p></div>
+                <div><p>follow us</p></div>
                 <div class="socialMediaContainer">
                   
                     <img src="./images/icons/socialMediaIcons/facebook.png" id="fb">

@@ -69,6 +69,7 @@ c.	Monthly hosting fee  R99 Afrihost
 //part 2
 
 //Changes
+
 We change enquiry page from equiry to tournament page since we have multiple tournament to showcase, enquiry froms will be hosted underneath contact us page as 
 it contains relevant info and people go to the page to get contact details therefore can also send us quiries via this form
 
@@ -81,9 +82,91 @@ We will then switch between the two menu depending on the device. We planning to
 
 Logo
 will be adjusted to be reponsive as per device
-
-Mobile device optimisations
+<!-- 
+moble screenshot -->
+Mobile device optimisations - Tablet and Screenshot
 ![alt text](image.png)
+
+<!-- tablet screenshot -->
+
+![alt text](images/mobileOptimisaScreenshot/tabletView.png)
+
+laptop and bigger screen
 
 
 for easy refence i upload mobile optimisation in a folder \Blouberg-Tournament\images\mobileOptimisaScreenshot
+
+Based on the feedback or rubric the following item needs to be addressed
+
+Some vague comments added but does not explain fully 
+-add comments on css for different page
+-
+-
+-
+
+Content is missing or irrelevant. 
+- added a new page called tournament
+- add more content on service page 
+- add images
+
+Budget is vague or unrealistic. 
+- Website development cost R3000
+- Website maintainance cost R700 per month
+
+
+Timeline is vague or unrealistic 
+-
+-
+
+ ## [1.0.0] 2025-09-17
+ ### added
+new page called tournament page was added
+## [1.2.0] 2025-09-24
+ More images added
+ ## [1.1.0]2025-09-20
+social media icons added and will be linked soon
+ 
+## [1.1.0] 2025-09-20
+Changes on tournament page
+
+
+
+## [1.1.0] 2025-09-30
+##Changes
+Styling tournament page
+
+
+navigatioon Menu
+navigation menu was adjusted for mobile device
+ ## [1.6.0] 2025-09-30
+ working on the footer
+
+## [1.3.0]2025-09-25
+mobile website optimisation testing
+
+
+ ## [1.4.0]2025-09-28
+change applied to the website based on feedback
+ ## [1.7.0]2025-09-31
+ Styling footers to be consistent
+ Styling aboutUs page
+
+ ## [1.5.0]2025-09- 29
+ ### Testing
+testing website accross different browsers
+
+
+
+## [1.6.0]2025-09- 30
+working on the navigation menu orientation for mobile <600px
+
+##image optimisation
+## [1.6.1] 2025-09-30
+
+##image added
+## [1.6.1] 2025-09-30
+
+images added for illustration only (fixtitious image)
+## [1.6.1] 2025-09-30
+
+ 
