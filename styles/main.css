@@ -155,9 +155,7 @@ img{
     height: auto;
 }
 
-.check{
-    display: none;
-}
+
 
 /* icon hamburger menu this css will be made functional with the use of Javascript*/
 
@@ -180,6 +178,8 @@ img{
   margin: 40px auto 0 auto;
   background-color: orange;
 }
+
+/* about us style */
 .aboutUsDiv{
     display: flex;   
     box-shadow: #333333;
@@ -190,6 +190,18 @@ img{
     overflow: auto;
   
 }
+.container-aboutUs{
+    display: flex;
+    gap: 20px;
+    border: #f1750f 2px solid;
+   
+}
+
+
+
+
+
+
 .mainDiv{
       display: block;
     column-gap: 5px;
@@ -212,7 +224,7 @@ img{
     grid-template-columns: auto auto auto;
 }
 main{
-    border: #f1750f solid 1px;
+   
     margin: 50px;
 }
 
@@ -320,8 +332,11 @@ a {
 
 
 /* tournament page */
+.features{
+ font-weight: bolder;
+}
 .tournaments{
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     justify-content: space-between;
@@ -334,7 +349,7 @@ a {
 
 
 .tournamentInfo{
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(4 , 1fr);
     gap: 20px;
     justify-content: space-between;
@@ -363,9 +378,17 @@ a {
 }
 
 .legendspic{
-  width: 50%;
+  width: 100%;
   border-radius: 25px;
 }
+
+.u23{
+  border: #f1750f 1px solid;
+  box-shadow: 4px 4px 4px 4px rgba(255, 168, 6, 0.63);
+    border-radius: 25px;
+}
+
+
 /* service page style */
 
 
@@ -391,7 +414,7 @@ a {
  
  
     }
-   .mainNavContainer{
+   /* .mainNavContainer{
     gap: 1rem;
     align-items: center;
     padding: 1rem;
@@ -402,23 +425,21 @@ a {
     font-size: 1rem;
     line-height: 1rem;
 
-}
+} */
 
-#mobi-menu:checked ~.mainNavContainer{
+/* #mobi-menu:checked ~.mainNavContainer{
     display: flex;
-}
-.mobi-menuIcon{
+} */
+/* .mobi-menuIcon{
   display: block;
-}
+} */
 img{
     max-width: 100%;
     height: auto;
     
 }
 
-.menuMobiDiv{
-    display: none;
-}
+
 /* for small screens and mobile phones */
 @media(max-width:600px){
     body{
@@ -488,9 +509,22 @@ align-self: center;
     font-size: 14px;
 }
 
- #mobileMain{
+ .tournamentInfo{
+flex-direction: column;
 
- }
+}
+.column1{
+    flex: 1 1 100%;
+}
+.tournaments{
+    flex-direction: column;
+}
+.article-Container{
+    flex-direction: column;
+     flex: 1 1 100%;
+
+}
+
 }
 
 

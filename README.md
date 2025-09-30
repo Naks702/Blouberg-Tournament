@@ -122,16 +122,19 @@ Timeline is vague or unrealistic
  ### added
 new page called tournament page was added
 ## [1.2.0] 2025-09-24
-Content changes - More images added
+ More images added
+ ## [1.1.0]2025-09-20
+social media icons added and will be linked soon
  
 ## [1.1.0] 2025-09-20
 Changes on tournament page
 
- ## [1.1.0]2025-09-20
-social media icons added and will be linked soon
 
-## [1.1.0] 2025-09-20
+
+## [1.1.0] 2025-09-30
 ##Changes
+Styling tournament page
+
 
 navigatioon Menu
 navigation menu was adjusted for mobile device
