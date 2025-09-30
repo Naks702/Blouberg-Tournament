@@ -147,6 +147,9 @@ mobile website optimisation testing
 
  ## [1.4.0]2025-09-28
 change applied to the website based on feedback
+ ## [1.7.0]2025-09-31
+ Styling footers to be consistent
+ Styling aboutUs page
 
  ## [1.5.0]2025-09- 29
  ### Testing

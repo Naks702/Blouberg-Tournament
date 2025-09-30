@@ -72,8 +72,12 @@ header{
 .h1headers{
     background-color:#f8c69a ;
     display: flex;
+    margin-bottom:20px ;
  
    
+}
+.services{
+    margin-bottom: 30px;
 }
 
 #logo{
@@ -523,6 +527,17 @@ flex-direction: column;
     flex-direction: column;
      flex: 1 1 100%;
 
+}
+.article-Container{
+    display: flex;
+    row-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.services{
+    border: #f1750f 2px solid;
+    margin-bottom: 5%;
+    box-shadow: rgba(255, 168, 6, 0.63);
+    padding: 15px;
 }
 
 }
