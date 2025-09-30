@@ -350,12 +350,12 @@ margin-left: 50px;
  color: red;
 }
 
-.articles, .article-three, .article-four{
+.articles, .article-three, .article-five,.article-four{
     border-radius: 10px;
     border: #f1750f solid 3px;
     box-shadow: 4px 4px 4px 4px rgba(255, 168, 6, 0.63);
 }
-.articles, .article-three, .article-four h2{
+.articles,.article-five, .article-three, .article-four h2{
     color:white;
     text-align: center;
     margin-top: 10px;
@@ -380,12 +380,13 @@ a {
 
 
 .tournamentInfo{
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(4 , 1fr);
-    gap: 20px;
-    justify-content: space-between;
-
+    gap: 100px;
+    justify-content: center;
+    
     padding: 20px;
+    max-width: 1200px;
 }
 .column1{
  
@@ -396,6 +397,7 @@ a {
     border: #f1750f solid 2px;
     max-width: 100%;
     height: auto;
+    width: 220px;
 }
 .column1 :last-child{
  margin-right:20px ;
