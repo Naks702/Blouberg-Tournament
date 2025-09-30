@@ -133,5 +133,8 @@ mobile website optimisation testing
  2025-09-28
 change applied to the website based on feedback
 
- 2025-09- 28
+ 2025-09- 29
 testing website accross different browsers
+
+ 2025-09- 30
+ working on the footer

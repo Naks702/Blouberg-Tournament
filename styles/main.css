@@ -147,15 +147,6 @@ input[type = submit ]{
     border: 2px solid red;
     font-weight: 20%;
 }
-.article-Container {
-    display: grid;
-    column-gap: 100px;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-    align-items: center;
-    
-}
-
 
 .formSubmitBtns{
     display: block;
@@ -164,46 +155,6 @@ img{
     max-width: 100%;
     height: auto;
 }
-
-/* tablet and small laptop screens
-    .form-containers{
-        display: block;
-        margin: auto;
-        padding: 10px;
-    }
-    .form-containers > div{
-        border: none;
-    }
-    .form-containers > div, form{
-        width: 100%;
-    }
-    .article-Container{
-        display: block;
-        margin: auto;
-        padding: 10px;
-    }
-    /* .article-Container > div{
-        border: none;
-        width: 100%;
-        margin-bottom: 20px;
-    } */
-    /* .container{
-        display: block;
-        margin: auto;
-        padding: 10px;
-    }
-    .container > div{
-        border: none;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    *
-    .minigallery{
-        display: block;
-        margin: auto;
-        padding: 10px;
-       
-} */
 
 .check{
     display: none;
@@ -339,15 +290,15 @@ width:50%;
 .row{
  display: flex;
 }
+
+/* homepage style */
 .minigallery{
-width: 10%;
+width: 30%;
 height: auto;
 display: block;
 margin-left: 50px;
+align-self: center;
 
-}
-.article-Container > h2{
- color: red;
 }
 
 .articles, .article-three, .article-four{
@@ -355,7 +306,7 @@ margin-left: 50px;
     border: #f1750f solid 3px;
     box-shadow: 4px 4px 4px 4px rgba(255, 168, 6, 0.63);
 }
-.articles, .article-three, .article-four h2{
+.articles, .article-three, .article-four, h2{
     color:white;
     text-align: center;
     margin-top: 10px;
@@ -365,6 +316,10 @@ a {
     color: inherit;
     
 }
+
+
+
+
 /* tournament page */
 .tournaments{
     display: grid;
@@ -407,15 +362,16 @@ a {
  margin-right:10px ;
  max-width: 100%;
 }
+.article-Container{
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
 
 /* service page style */
 
-.article-Container{
-    display: grid;
-    column-gap: 50px;
-    grid-template-columns: 1fr 1fr;
-}
+
 .card1, .card2, .card3,.card4{
     border-radius: 10px;
     border: #f1750f solid 3px;
@@ -468,21 +424,48 @@ img{
 }
 /* for small screens and mobile phones */
 @media(max-width:600px){
+    body{
+        font-size: 13px;
+        line-height: 1.4rem;
+        padding: 0 5px;
+    }
+    img,.logo{
+        max-width: 120px;
+        height: auto;
+    }
  img{
     width: 100%;
     height: auto;
  }
  .mainNavContainer{
   display: grid;
-  flex-direction: row;
   align-items: flex-end;
   position: absolute;
-  top: 60px;
-  right: 10px;
+  top: 0;
+  gap:2px;
+  right: 0;
   padding: 10px;
   z-index: 999;
+      grid-template-columns: 1fr;
 
  }
+
+  .mainNavContainer a {
+    color: white; 
+    margin: 1px;
+    background-color: rgba(255, 168, 6, 0.63);
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+    height: auto;
+    position: relative;
+}
+
+
  .footer{
     display: block;
     margin: auto;
@@ -491,13 +474,26 @@ img{
     font-size: 14px;
     background-color: orange;
     color: white;
-    border-radius: 10px;
     box-shadow: 4px 4px 8px rgba(255, 168, 6, 0.63);
     max-width: 100%;
     height: auto;
     margin-top: 20px;
  }
- 
+ .minigallery{
+width: 30%;
+height: auto;
+display: none;
+margin-left: 50px;
+align-self: center;
+
+}
+.articles, .article-three, .article-four, h2{
+    font-size: 14px;
+}
+
+ #mobileMain{
+
+ }
 }
 
 
