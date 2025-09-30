@@ -80,7 +80,6 @@ header{
     top: 0;
     left: 0;
     position: relative;
-    /* z-index: 1000; */
     width: 80px;
     margin-bottom: 10px;
     height: auto;
@@ -296,8 +295,8 @@ width:50%;
 width: 30%;
 height: auto;
 display: block;
-margin-left: 50px;
-align-self: center;
+margin-left: 35%;
+text-align: center;
 
 }
 
@@ -429,14 +428,16 @@ img{
         line-height: 1.4rem;
         padding: 0 5px;
     }
-    img,.logo{
-        max-width: 120px;
+    #logo{
+        max-width: 100%;
         height: auto;
     }
  img{
     width: 100%;
     height: auto;
  }
+
+ /* the aim is to achieve stacked navigation menu items to fit small screen */
  .mainNavContainer{
   display: grid;
   align-items: flex-end;
@@ -445,8 +446,8 @@ img{
   gap:2px;
   right: 0;
   padding: 10px;
-  z-index: 999;
-      grid-template-columns: 1fr;
+  justify-items: end;
+ grid-template-columns: 1fr;
 
  }
 
@@ -482,8 +483,6 @@ img{
  .minigallery{
 width: 30%;
 height: auto;
-display: none;
-margin-left: 50px;
 align-self: center;
 
 }

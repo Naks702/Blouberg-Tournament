@@ -82,9 +82,16 @@ We will then switch between the two menu depending on the device. We planning to
 
 Logo
 will be adjusted to be reponsive as per device
-
-Mobile device optimisations
+<!-- 
+moble screenshot -->
+Mobile device optimisations - Tablet and Screenshot
 ![alt text](image.png)
+
+<!-- tablet screenshot -->
+
+![alt text](images/mobileOptimisaScreenshot/tabletView.png)
+
+laptop and bigger screen
 
 
 for easy refence i upload mobile optimisation in a folder \Blouberg-Tournament\images\mobileOptimisaScreenshot
@@ -138,3 +145,7 @@ testing website accross different browsers
 
  2025-09- 30
  working on the footer
+
+2025-09- 30
+working on the navigation menu orientation for mobile <600px
+ 
