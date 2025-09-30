@@ -322,16 +322,10 @@ a {
 /* tournament page */
 .tournaments{
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     justify-content: space-between;
-    grid-template-areas:'container-footer' ;
-    padding: 20px;
-    box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
-    border-radius: 10px;    
-    border: #f1750f solid 2px;
-    margin-bottom: 20px;
-    height: auto;
+
 }
 #tourneyBtn{
     border-radius: 5px;
@@ -344,6 +338,7 @@ a {
     grid-template-columns: repeat(4 , 1fr);
     gap: 20px;
     justify-content: space-between;
+
 
     padding: 20px;
 }
@@ -367,7 +362,10 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-
+.legendspic{
+  width: 50%;
+  border-radius: 25px;
+}
 /* service page style */
 
 

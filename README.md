@@ -111,41 +111,56 @@ Content is missing or irrelevant.
 
 Budget is vague or unrealistic. 
 - Website development cost R3000
-- website maintainance cost R700 per month
+- Website maintainance cost R700 per month
 
 
 Timeline is vague or unrealistic 
 -
 -
 
- 2025-09-17
+ ## [1.0.0] 2025-09-17
+ ### added
 new page called tournament page was added
+## [1.2.0] 2025-09-24
+Content changes - More images added
  
-2025-09-20
+## [1.1.0] 2025-09-20
 Changes on tournament page
 
- 2025-09-17
+ ## [1.1.0]2025-09-20
 social media icons added and will be linked soon
+
+## [1.1.0] 2025-09-20
+##Changes
 
 navigatioon Menu
 navigation menu was adjusted for mobile device
-
- 2025-09-24
-Content changes - More images added
-
-
-2025-09-25
-mobile website optimisation testing
-
- 2025-09-28
-change applied to the website based on feedback
-
- 2025-09- 29
-testing website accross different browsers
-
- 2025-09- 30
+ ## [1.6.0] 2025-09-30
  working on the footer
 
-2025-09- 30
+## [1.3.0]2025-09-25
+mobile website optimisation testing
+
+
+ ## [1.4.0]2025-09-28
+change applied to the website based on feedback
+
+ ## [1.5.0]2025-09- 29
+ ### Testing
+testing website accross different browsers
+
+
+
+## [1.6.0]2025-09- 30
 working on the navigation menu orientation for mobile <600px
+
+##image optimisation
+## [1.6.1] 2025-09-30
+
+##image added
+## [1.6.1] 2025-09-30
+
+images added for illustration only (fixtitious image)
+## [1.6.1] 2025-09-30
+
  
