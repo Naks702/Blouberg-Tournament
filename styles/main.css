@@ -1,20 +1,19 @@
 
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-}
-body{
+
+body, html {
     background-color:#f8c69a ;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 2rem;
     padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     
 }
 main{
- top : 120px;
- bottom: 60px;
- position: absolute;
+ margin: 50px;
+ flex: 1;
 }
 
 a:link{
@@ -176,6 +175,7 @@ img{
 
 
 .container-footer{
+  position: relative;  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -499,7 +499,7 @@ img{
 
 
  .footer{
-    display: block;
+   
     margin: auto;
     padding: 10px;
     text-align: center;
@@ -567,5 +567,17 @@ flex-direction: column;
 
 }
 
+/* footer */
+
+.footer{
+    text-align: center;
+    font-size: 14px;
+    background-color: orange;
+    color: white;
+    box-shadow: 4px 4px 8px rgba(255, 168, 6, 0.63);
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+ }
 
 
