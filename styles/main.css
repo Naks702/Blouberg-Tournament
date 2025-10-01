@@ -13,6 +13,7 @@ body{
 }
 main{
  top : 120px;
+ bottom: 60px;
  position: absolute;
 }
 
