@@ -96,7 +96,7 @@ laptop and bigger screen
 
 for easy refence i upload mobile optimisation in a folder \Blouberg-Tournament\images\mobileOptimisaScreenshot
 
-Based on the feedback or rubric the following item needs to be addressed
+Based on the feedback or rubric the following item will be addressed
 
 Some vague comments added but does not explain fully 
 -add comments on css for different page
@@ -112,11 +112,10 @@ Content is missing or irrelevant.
 Budget is vague or unrealistic. 
 - Website development cost R3000
 - Website maintainance cost R700 per month
+ - website hosting fee R100
+ -Domain registration R100 per year
+ total budget: 3900
 
-
-Timeline is vague or unrealistic 
--
--
 
  ## [1.0.0] 2025-09-17
  ### added
@@ -169,4 +168,5 @@ working on the navigation menu orientation for mobile <600px
 images added for illustration only (fixtitious image)
 ## [1.6.1] 2025-09-30
 
- 
+fixed footer css
+## [1.7.0] 2025-10-01
