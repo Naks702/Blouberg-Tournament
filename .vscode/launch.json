@@ -6,7 +6,7 @@
     "configurations": [
         
         {
-            "type": "chrome",
+            "type": "msedge",
             "request": "launch",
             "name": "Open index.html",
             "file": "c:\\Users\\RC_Student_lab\\Documents\\Blouberg Tournament\\index.html"
