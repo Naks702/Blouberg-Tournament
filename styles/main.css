@@ -78,6 +78,7 @@ header{
 }
 .services{
     margin-bottom: 30px;
+    border: #f1750f red;
 }
 
 #logo{
@@ -199,6 +200,11 @@ img{
     gap: 20px;
     border: #f1750f 2px solid;
    
+}
+.Ourhistory, .aboutUsPurpose, .whoArewePurpose, .values{
+    padding: 5px;
+    border-bottom: orange solid 3px;
+    box-shadow: #333333 10px;
 }
 
 
@@ -390,7 +396,7 @@ a {
 .u23{
   border: #f1750f 1px solid;
   box-shadow: 4px 4px 4px 4px rgba(255, 168, 6, 0.63);
-    border-radius: 25px;
+  border-radius: 25px;
 }
 
 
@@ -446,7 +452,7 @@ img{
 
 
 /* for small screens and mobile phones */
-@media(max-width:600px){
+@media(max-width:768px){
     body{
         font-size: 13px;
         line-height: 1.4rem;
@@ -520,6 +526,12 @@ flex-direction: column;
 }
 .column1{
     flex: 1 1 100%;
+    padding: 5px;
+}
+.u23{
+   
+    padding: 10px;
+ 
 }
 .tournaments{
     flex-direction: column;
@@ -541,6 +553,14 @@ flex-direction: column;
     padding: 15px;
 }
 
+.aboutUsContainer{
+    display: grid;
+    box-shadow: rgba(255, 168, 6, 0.63);
+}
+
+.Ourhistory, .aboutUsPurpose, .whoArewePurpose, .values{
+    padding: 5px;
+}
 }
 
 
