@@ -184,10 +184,20 @@ SEO
 ## [2.0.0] 2025-10-01
 ### added robots.txt 
 ### added sitemap.xml
+
+
+
+
+
 we added two file that is very important for SEO, that is robots.txt file and sitemap
 robots.txt can help search engine crawlers to under stand which page should not be crawled such admin/login page
 With sitemap we can list all url that we need search engine to see and most importantly with help of piority score
 we can assign score to indicate which must be priortise by search engine
 NB all these two files needs to be added in the root folder of the site
+
+Image optimisation
+## [2.1.0] 2025-10-02
+As part of the SEO to make sure our website is mobile first optimise we reduce our image size because our website was 35MB 
+which is too big for site to load properly on the mobile, we compressed all our images using this webiste https://tinypng.com/
 
 
