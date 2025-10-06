@@ -1,19 +1,23 @@
 
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-}
-body{
+
+body, html {
     background-color:#f8c69a ;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 2rem;
     padding-top: 110px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     
 }
+span{
+    color: red;
+   
+}
 main{
- top : 120px;
- position: absolute;
+ margin: 50px;
+ flex: 1;
 }
 
 a:link{
@@ -72,12 +76,10 @@ header{
 .h1headers{
     background-color:#f8c69a ;
     display: flex;
-    margin-bottom:20px ;
- 
-   
 }
 .services{
     margin-bottom: 30px;
+    border: #f1750f red;
 }
 
 #logo{
@@ -129,6 +131,8 @@ input{
     margin: 5x;
 
 }
+
+/* styling the forms */
 input[type = submit ]{
  cursor: pointer;
  margin: 5px;
@@ -174,13 +178,16 @@ img{
 
 
 .container-footer{
+  position: relative;  
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   max-width: 1200px;
   margin: 40px auto 0 auto;
-  background-color: orange;
+ box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+ padding-left: 25%;
+ padding-right: 75%;
 }
 
 /* about us style */
@@ -199,6 +206,11 @@ img{
     gap: 20px;
     border: #f1750f 2px solid;
    
+}
+.Ourhistory, .aboutUsPurpose, .whoArewePurpose, .values{
+    padding: 5px;
+    border-bottom: orange solid 3px;
+    box-shadow: #333333 10px;
 }
 
 
@@ -231,7 +243,9 @@ main{
    
     margin: 50px;
 }
-
+/* span{
+    display: none;
+} */
 /* contact us style */
 
 .map{
@@ -294,17 +308,7 @@ width:50%;
 .slideImg{
     display: grid;
 }
-.column{
-  float: left;
-  width: 100%;
-  padding: 5px;
-  display: flex;
-  box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
- border-radius: 10px;
-}
-.row{
- display: flex;
-}
+
 
 /* homepage style */
 .minigallery{
@@ -332,8 +336,35 @@ a {
     
 }
 
+.column{
+  float: left;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+ border-radius: 10px;
+}
+.row{
+ display: flex;
+ position:relative;
+ margin:auto;
+ max-width: 100%;
+}
+.prevButton .nextButton{
 
+    cursor: pointer;
+    position:absolute;
+    top: 50%;
+    background-color: #f1750f;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color:white;
+    font: 18px;
+    right: 0;
+    border-radius:3px 0 0 3px ;
 
+}
 
 /* tournament page */
 .features{
@@ -390,7 +421,7 @@ a {
 .u23{
   border: #f1750f 1px solid;
   box-shadow: 4px 4px 4px 4px rgba(255, 168, 6, 0.63);
-    border-radius: 25px;
+  border-radius: 25px;
 }
 
 
@@ -446,7 +477,7 @@ img{
 
 
 /* for small screens and mobile phones */
-@media(max-width:600px){
+@media(max-width:768px){
     body{
         font-size: 13px;
         line-height: 1.4rem;
@@ -492,7 +523,7 @@ img{
 
 
  .footer{
-    display: block;
+   
     margin: auto;
     padding: 10px;
     text-align: center;
@@ -520,6 +551,12 @@ flex-direction: column;
 }
 .column1{
     flex: 1 1 100%;
+    padding: 5px;
+}
+.u23{
+   
+    padding: 10px;
+ 
 }
 .tournaments{
     flex-direction: column;
@@ -531,18 +568,40 @@ flex-direction: column;
 }
 .article-Container{
     display: flex;
-    row-gap: 50px;
+    row-gap: 15px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .services{
-    border: #f1750f 2px solid;
+  
     margin-bottom: 5%;
     box-shadow: rgba(255, 168, 6, 0.63);
     padding: 15px;
 }
 
+.aboutUsContainer{
+    display: grid;
+    box-shadow: rgba(255, 168, 6, 0.63);
+}
+
+.Ourhistory, .aboutUsPurpose, .whoArewePurpose, .values{
+    padding: 5px;
 }
 
 
+
+}
+
+/* footer */
+
+.footer{
+    text-align: center;
+    font-size: 14px;
+    background-color: orange;
+    color: white;
+    box-shadow: 4px 4px 8px rgba(255, 168, 6, 0.63);
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+ }
 
 

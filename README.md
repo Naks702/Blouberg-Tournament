@@ -96,7 +96,7 @@ laptop and bigger screen
 
 for easy refence i upload mobile optimisation in a folder \Blouberg-Tournament\images\mobileOptimisaScreenshot
 
-Based on the feedback or rubric the following item needs to be addressed
+Based on the feedback or rubric the following item will be addressed
 
 Some vague comments added but does not explain fully 
 -add comments on css for different page
@@ -112,61 +112,93 @@ Content is missing or irrelevant.
 Budget is vague or unrealistic. 
 - Website development cost R3000
 - Website maintainance cost R700 per month
+ - website hosting fee R100
+ -Domain registration R100 per year
+ total budget: 3900
 
 
-Timeline is vague or unrealistic 
--
--
+ [2.1.0] - 2025-10-06
+ working on th gallery slideshow
 
- ## [1.0.0] 2025-09-17
- ### added
-new page called tournament page was added
-## [1.2.0] 2025-09-24
- More images added
- ## [1.1.0]2025-09-20
-social media icons added and will be linked soon
- 
-## [1.1.0] 2025-09-20
-Changes on tournament page
+ [2.1.0] - 2025-10-02
+Changed
 
+Reduced image sizes to improve performance and mobile SEO (site reduced from 35MB to 15MB).
 
+Used TinyPNG
+ for compression.
 
-## [1.1.0] 2025-09-30
-##Changes
-Styling tournament page
+Added
 
+Started work on JavaScript form validation.
 
-navigatioon Menu
-navigation menu was adjusted for mobile device
- ## [1.6.0] 2025-09-30
- working on the footer
+[2.0.0] - 2025-10-01
+Added
 
-## [1.3.0]2025-09-25
-mobile website optimisation testing
+robots.txt file to control search engine crawling.
 
+sitemap.xml to list all important URLs and assign priority for SEO.
 
- ## [1.4.0]2025-09-28
-change applied to the website based on feedback
- ## [1.7.0]2025-09-31
- Styling footers to be consistent
- Styling aboutUs page
+Changed
 
- ## [1.5.0]2025-09- 29
- ### Testing
-testing website accross different browsers
+General SEO improvements for better indexing.
 
+[1.7.0] - 2025-09-31
+Changed
 
+Styled footers for consistency.
 
-## [1.6.0]2025-09- 30
-working on the navigation menu orientation for mobile <600px
+Updated styling on the About Us page.
 
-##image optimisation
-## [1.6.1] 2025-09-30
+[1.6.1] - 2025-09-30
+Added
 
-##image added
-## [1.6.1] 2025-09-30
+Illustrative (non-final) images.
 
-images added for illustration only (fixtitious image)
-## [1.6.1] 2025-09-30
+Fixed
 
- 
+Footer CSS issues.
+
+[1.6.0] - 2025-09-30
+Changed
+
+Navigation menu orientation improved for mobile devices (<600px).
+
+Footer design updates.
+
+[1.5.0] - 2025-09-29
+Testing
+
+Cross-browser testing for website compatibility.
+
+[1.4.0] - 2025-09-28
+Changed
+
+Adjusted website based on user feedback.
+
+[1.3.0] - 2025-09-25
+Changed
+
+Mobile website optimization testing.
+
+[1.2.0] - 2025-09-24
+Added
+
+More images across the website.
+
+[1.1.0] - 2025-09-20 → 2025-09-30
+Added
+
+Social media icons (to be linked soon).
+
+Changed
+
+Tournament page design and styling.
+
+Adjustments to navigation menu for mobile devices.
+
+[1.0.0] - 2025-09-17
+Added
+
+Tournament page created.
+

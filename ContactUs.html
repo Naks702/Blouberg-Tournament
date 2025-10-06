@@ -7,18 +7,23 @@
         <title>Contact Us</title>
         <link rel="icon" type="image/x-icon" href="./images/icons/favicon-96x96.png">
              <link rel="stylesheet" href="./styles/main.css">
+        <script src="/scripts/main.js"></script>
     </head>
     <body> 
          <header>
          <div class="logo">
               <img src="./images/logos/blouberg.png" id="logo" >
          </div>
+<<<<<<< HEAD
              
 
     <nav>
       
       
        
+=======
+   <!-- we aiming for hamburger menu once we have javascript for mobile -->
+>>>>>>> 6dc2281c04885378095dbdd91f8e3df54020fdc9
          <div class="mainNavContainer"> 
                 <a href="Index.html">Home</a>
                 <a href="AboutUs.html">About Us</a>
@@ -39,30 +44,39 @@
         <main> 
              <section class="map">
                 
+              <!-- map will be added later in the part in 3 -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.293196463538!2d28.198682674630533!3d-26.28459356725138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e951b3f1b1e3819%3A0x6e8d6cb720b338c!2sSugar&#39;s%20Computer%20Repair%20Shop!5e0!3m2!1sen!2sza!4v1756302567532!5m2!1sen!2sza"
                  width="397" height="377" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div id="sponsorForm">
               
-                 <form id="sponsorForm" action="" method="get">
+                 <form id="sponsorForm" action="./Thank.you.html"  onsubmit=" return formValidation()">
                         <h2>Sponsorship form</h2>
                 <div>   
                 <p>Join us in this journey of empowerment.  </p>
-                  <label for="firstName" id="spFirstName">First Name</label>
-                    <input type="text" id="splastName">
-                   </label><br>
-                   <label for="lastName" id="firstName">Last Name
-                    <input type="text" id="spFirstName">
-                   </label><br>
+                  <label for="firstName">First Name</label>
+                    <input type="text" id="firstName">
+                    <span id ="validateFirstName"></span>
+                    <br>
+                   </label>
+
+                   <label for="lastName" id="lastName">Last Name</label>
+                    <input type="text">
+                   <span id ="validateLastName"></span>
+                   </label>
                    <label for="Email">Email
-                    <input type="Email" id="spEmail">
-                   </label><br>
-                   <label for="Cell Number" id="cellphone">Cell Number
-                    <input type="tel" id="Spcellphone">
-                   </label><br>
+                    <input type="Email" id="email">
+                    <span id ="validateEmail"></span>
+                   </label>
+                   <label for="Cell Number">Cell Number
+                    <input type="tel" id="cellphone">
+                    <span id ="validateCellphone"></span>
+                   </label>
+                   <!-- No validation here not mandory because it has to consider application from everyone in the community  -->
                    <label for="Company Name" id="spCompanyName">Company Name
                     <input type="text" id="spCompanyName">
-                   </label><br>
-                    <input type="submit" class="formSubmitBtns">
+                   </label>
+                    <input type="submit" class="formSubmitBtns" id="submitbtn">
+                  
                   
                  </form>
                 </div>
@@ -99,7 +113,11 @@
                </div>
              </div>
 
-             <div class="container-footer">
+           
+            
+      </main>
+
+          <div class="container-footer">
                <footer class="footer">
                <div class="footerContent"><p>&copy; 2025 Blouberg. All Rights reserved</p>
                 <div><p>social media pages</p></div>
@@ -113,11 +131,11 @@
                     <img src="./images/icons/socialMediaIcons/twitter.png" id="tik-tok">
                 </div>
               </div>
-             </footer>
+            </footer>
             </div>
-            
-        </main>
-        
        
+
+
+           
     </body>
 </html>
