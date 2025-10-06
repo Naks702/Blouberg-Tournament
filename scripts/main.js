@@ -2,20 +2,22 @@
 function formValidation(){
     isValid = true;
     let firstname =  document.getElementById("firstName").value;
-    let lastName =  document.getElementById("lastName").value;
-    let cellphone =  document.getElementById("cellphone").value;
-    let email   =  document.getElementById("email").value;
-
-    let validateFirstName = "enter the first name";
+    // let lastName =  document.getElementById("lastName").value;
+    // let cellphone =  document.getElementById("cellphone").value;
+    // let email   =  document.getElementById("email").value;
+    let opt;
+  switch(opt){
+   case firstname.value;
+  }
+    
     if(firstname ==""){
-       validateFirstName;
-        firstname.style.display ="block"
+      document.getElementById("validateFirstName").innerHTML = "enter first name"   
         isValid = false;
     }
-    // if(lastName == ""){
-    //    document.getElementById("validateLastName").innerHTML ="enter the last name";
-    //     isValid = false;
-    // }
+    else if(lastName == ""){
+       document.getElementById("validateLastName").innerHTML ="enter the last name";
+        isValid = false;
+    }
     //   if(cellphone == ""){
     //   document.getElementById("validateCellphone").innerHTML ="enter cellphone";
     //     isValid = false;
