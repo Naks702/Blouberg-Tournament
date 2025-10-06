@@ -117,87 +117,88 @@ Budget is vague or unrealistic.
  total budget: 3900
 
 
- ## [1.0.0] 2025-09-17
- ### added
-new page called tournament page was added
-## [1.2.0] 2025-09-24
- More images added
- ## [1.1.0]2025-09-20
-social media icons added and will be linked soon
- 
-## [1.1.0] 2025-09-20
-Changes on tournament page
+ [2.1.0] - 2025-10-06
+ working on th gallery slideshow
 
+ [2.1.0] - 2025-10-02
+Changed
 
+Reduced image sizes to improve performance and mobile SEO (site reduced from 35MB to 15MB).
 
-## [1.1.0] 2025-09-30
-##Changes
-Styling tournament page
+Used TinyPNG
+ for compression.
 
+Added
 
-navigatioon Menu
-navigation menu was adjusted for mobile device
- ## [1.6.0] 2025-09-30
- working on the footer
+Started work on JavaScript form validation.
 
-## [1.3.0]2025-09-25
-mobile website optimisation testing
+[2.0.0] - 2025-10-01
+Added
 
+robots.txt file to control search engine crawling.
 
- ## [1.4.0]2025-09-28
-change applied to the website based on feedback
- ## [1.7.0]2025-09-31
- Styling footers to be consistent
- Styling aboutUs page
+sitemap.xml to list all important URLs and assign priority for SEO.
 
- ## [1.5.0]2025-09- 29
- ### Testing
-testing website accross different browsers
+Changed
 
+General SEO improvements for better indexing.
 
+[1.7.0] - 2025-09-31
+Changed
 
-## [1.6.0]2025-09- 30
-working on the navigation menu orientation for mobile <600px
+Styled footers for consistency.
 
-##image optimisation
-## [1.6.1] 2025-09-30
+Updated styling on the About Us page.
 
-##image added
-## [1.6.1] 2025-09-30
+[1.6.1] - 2025-09-30
+Added
 
-images added for illustration only (fixtitious image)
-## [1.6.1] 2025-09-30
+Illustrative (non-final) images.
 
-fixed footer css
-## [1.7.0] 2025-10-01
+Fixed
 
+Footer CSS issues.
 
-///
+[1.6.0] - 2025-09-30
+Changed
 
-part 3 work
+Navigation menu orientation improved for mobile devices (<600px).
 
-add javascript
-## [2.0.0] 2025-10-01
+Footer design updates.
 
-SEO
+[1.5.0] - 2025-09-29
+Testing
 
-## [2.0.0] 2025-10-01
-### added robots.txt 
-### added sitemap.xml
+Cross-browser testing for website compatibility.
 
+[1.4.0] - 2025-09-28
+Changed
 
+Adjusted website based on user feedback.
 
+[1.3.0] - 2025-09-25
+Changed
 
+Mobile website optimization testing.
 
-we added two file that is very important for SEO, that is robots.txt file and sitemap
-robots.txt can help search engine crawlers to under stand which page should not be crawled such admin/login page
-With sitemap we can list all url that we need search engine to see and most importantly with help of piority score
-we can assign score to indicate which must be priortise by search engine
-NB all these two files needs to be added in the root folder of the site
+[1.2.0] - 2025-09-24
+Added
 
-Image optimisation
-## [2.1.0] 2025-10-02
-As part of the SEO to make sure our website is mobile first optimise we reduce our image size because our website was 35MB 
-which is too big for site to load properly on the mobile, we compressed all our images using this webiste https://tinypng.com/
+More images across the website.
 
+[1.1.0] - 2025-09-20 → 2025-09-30
+Added
+
+Social media icons (to be linked soon).
+
+Changed
+
+Tournament page design and styling.
+
+Adjustments to navigation menu for mobile devices.
+
+[1.0.0] - 2025-09-17
+Added
+
+Tournament page created.
 

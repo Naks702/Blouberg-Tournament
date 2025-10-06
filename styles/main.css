@@ -13,6 +13,7 @@ body, html {
 }
 span{
     color: red;
+   
 }
 main{
  margin: 50px;
@@ -305,17 +306,7 @@ width:50%;
 .slideImg{
     display: grid;
 }
-.column{
-  float: left;
-  width: 100%;
-  padding: 5px;
-  display: flex;
-  box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
- border-radius: 10px;
-}
-.row{
- display: flex;
-}
+
 
 /* homepage style */
 .minigallery{
@@ -343,8 +334,35 @@ a {
     
 }
 
+.column{
+  float: left;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+ border-radius: 10px;
+}
+.row{
+ display: flex;
+ position:relative;
+ margin:auto;
+ max-width: 100%;
+}
+.prevButton .nextButton{
 
+    cursor: pointer;
+    position:absolute;
+    top: 50%;
+    background-color: #f1750f;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color:white;
+    font: 18px;
+    right: 0;
+    border-radius:3px 0 0 3px ;
 
+}
 
 /* tournament page */
 .features{
