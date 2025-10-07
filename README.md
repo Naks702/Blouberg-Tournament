@@ -116,6 +116,10 @@ Budget is vague or unrealistic.
  -Domain registration R100 per year
  total budget: 3900
 
+ 
+ [2.2.0] - 2025-10-07
+adding AJAX Forms"
+
 
  [2.1.0] - 2025-10-06
  working on th gallery slideshow
