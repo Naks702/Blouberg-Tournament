@@ -271,9 +271,17 @@ box-shadow: 4px 4px 8px;
 
 }
 .socialMediaContainer{
- width: 30px;
+ justify-content: center; 
  display: flex;
  gap: 10px;
+ padding: 10px;
+ text-align: center;
+ width: fit-content;
+ margin: 0 auto;
+}
+
+.socialMediaContainer img{
+    width: 50px;
 }
 
 .map iframe{
@@ -486,15 +494,13 @@ img{
 
  /* the aim is to achieve stacked navigation menu items to fit small screen */
  .mainNavContainer{
-  display: grid;
-  align-items: flex-end;
+  display: none;
   position: absolute;
-  top: 0;
-  gap:2px;
-  right: 150px;
-  padding: 10px;
-  justify-items: end;
- grid-template-columns: 1fr;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
 
  }
 
@@ -578,22 +584,106 @@ flex-direction: column;
 .Ourhistory, .aboutUsPurpose, .whoArewePurpose, .values{
     padding: 5px;
 }
-
-
+/* hamburgerMenu  styling*/
+.hamburgerMenu{
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.hamburgerMenu{
+ overflow: hidden;
+ position: relative;
 
 }
+
+ .bar{
+    width: 100%;
+    height: 10px;
+    color:orange;
+
+ }
+ .hamburger{
+    display: flex;
+ }
+ 
+
+}
+
+
+
 
 /* footer */
 
 .footer{
     text-align: center;
     font-size: 14px;
-    background-color: orange;
-    color: white;
+    background-color: wheat;
+  
     box-shadow: 4px 4px 8px rgba(255, 168, 6, 0.63);
     max-width: 100%;
     height: auto;
     margin-top: 20px;
  }
 
+ 
+.hiddenbox{
+    display: none;
+}
 
+/* slider images */
+.slider{
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto ;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.slides{
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+
+}
+#slides img{
+    width: 500px;
+    height: auto;
+
+}
+.dots{
+    text-align: center;
+    margin-top:10px ;
+}
+.dot{
+ height: 12px;
+ width:12px ;
+ margin: 0 5px;
+ background-color: #bbb;
+ border-radius: 50%;
+ display: inline-block;
+ cursor: pointer;
+}
+.active{
+    background-color: #333;
+}
+.prevBtn, .nextBtn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;  
+}
+.prevBtn{
+  left: 10px;
+}
+.nextBtn{
+    right: 10px;
+}

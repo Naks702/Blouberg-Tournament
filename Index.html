@@ -1,146 +1,110 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blouberg Tournament | Homepage</title>
+  <link rel="icon" type="image/x-icon" href="./images/icons/favicon-96x96.png">
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
 
-<html>
-    <head>
-        <title>Homepage</title>
-        <link rel="icon" type="image/x-icon" href="./images/icons/favicon-96x96.png">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-             <link rel="stylesheet" href="./styles/main.css">
-    </head>
-    <!-- <body style="background-color: #f4982b;"> -->
-        <body>
-        <header>
-             <div class="logo">
-              <img src="./images/logos/blouberg.png" id="logo"
-               srcset="images/logos/blouberg.png 2x, images/logos/blouberg.png 3x,"
-               alt="Logo"
-              >
-         </div>
-          
-       
-      
-     <nav>
-       <!-- we aiming for hamburger menu once we have javascript for mobile -->
-         <div class="mainNavContainer"> 
-                <a href="Index.html">Home</a>
-                <a href="AboutUs.html">About Us</a>
-                <a href="Services.html">Services</a>
-                <a href="Tournaments.html">Tournaments</a>
-                <a href="./ContactUs.html">Contact Us</a>  
-                
-               
-               </div>
-                
-        </nav>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo">
+      <img src="./images/logos/blouberg.png" id="logo" alt="Blouberg Logo">
+    </div>
 
-        </header>
-      
-        <main id ="mobileMain">
-         <div id="resultSlide">
-          
-         </div>
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
 
-          <!-- this is where we will put a slideshows / gallery of images  -->
-           <!-- this will be made interactive or autoplay with JAVAScript on part 3 -->
-         <div class="row">
-          <div class="column">
-            <img src="./images/website gallery/pexels-thato-moiketsi-909645793-32422417.jpg">
-         </div>
-           
-         <div class="nextButton">&#10094</div>
-          <div class="prevButton">&#10095</div>
-          
-         
-        <div class="h1headers">
-          <h1>Blouberg Tournament</h1>
-        </div>
+      <div class="mainNavContainer" id="navLinks">
+        <a href="Index.html">Home</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="Services.html">Services</a>
+        <a href="Tournaments.html">Tournaments</a>
+        <a href="ContactUs.html">Contact Us</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <!-- slideshow on main page -->
+    <div class="slider">
+      <div class="slides" id="slides">
+        <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-30782367.jpg" alt="">
+        <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-31105911.jpg" alt="">
+        <img src="./images/website gallery/pexels-thato-moiketsi-909645793-32422417.jpg" alt="">
+      </div>
+      <!-- next and previous button -->
+      <button class ="prevBtn"id="prevBtn">&#10094;</button>
+      <button class ="nextBtn" id="nextBtn">&#10095;</button>
+    </div>
+    <div class="dots" id="dots"></div>
+    <section class="hero-section">
+      <div class="h1headers">
+        <h1>Blouberg Tournament</h1>
+      </div>
+      <h2>The benefits of the initiative</h2>
+      <article class="article-one">
+        <ul>
+          <li>Tournament updates: Keeping the community informed about events, results, and highlights.</li>
+          <li>Blouberg Annual Tournament – More than a game, it’s a movement.</li>
+          <li>Sponsorship opportunities for local businesses to support a meaningful cause.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="article-Container">
+      <article class="articles">
+        <a href="#">
+          <h2>Blogs and News</h2>
+          <img src="./images/icons/news.png" class="minigallery" alt="News Icon">
+        </a>
+      </article>
+
+      <article class="article-three">
+        <a href="#">
+          <h2>Live Matches</h2>
+          <img src="./images/icons/football.png" class="minigallery" alt="Football Icon">
+        </a>
+      </article>
+
+      <article class="article-four">
+        <a href="#">
+          <h2>Match Results</h2>
+          <img src="./images/icons/score.png" class="minigallery" alt="Score Icon">
+        </a>
+      </article>
+
+      <article class="article-five">
+        <a href="#">
+          <h2>Gallery</h2>
+          <img src="./images/gallery.png" class="minigallery" alt="Gallery Icon">
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
    
-             <h2>The benefits of the initiative</h2>
-         <article class="article-one">
-                <ul>
-                    <li>Tournament updates: Keeping the community informed about upcoming events, results, and highlights.</li>
-                    <li>Blouberg Annual Tournament – More than a game, it’s a movement</li>
-                    <li>Sponsorship opportunities: Raising awareness among businesses interested in supporting a meaningful cause.</li>
-                   
-                </ul>
+    <div class="socialMediaContainer">
+      <img src="./images/icons/socialMediaIcons/facebook.png" alt="Facebook">
+      <img src="./images/icons/socialMediaIcons/instagram.png" alt="Instagram">
+      <img src="./images/icons/socialMediaIcons/youtube.png" alt="YouTube">
+      <img src="./images/icons/socialMediaIcons/social.png" alt="WhatsApp">
+      <img src="./images/icons/socialMediaIcons/tik-tok.png" alt="TikTok">
+      <img src="./images/icons/socialMediaIcons/twitter.png" alt="Twitter">
+    </div>
+      <p>&copy; 2025 Blouberg. All Rights Reserved</p>
+  </footer>
 
-             </article>
-            <div class="article-Container">
-               <div class="articles">
-                  <article class="article-two">
-                    <a href="#">
-                <h2>Blogs and News</h2>
-                
-                <img src="./images/icons/news.png" class="minigallery">
-                    </a>
-                    
-             </article>
-             
-               </div>
-               <div>
-                  <article class="article-three">
-              <a href="#">
-                <h2>Live matches</h2>
-                
-                <img src="./images/icons/football.png"   class="minigallery">
-                </a>
-             </article>
-               </div>
-            <div>
-              <article class="article-four"> 
-                <a href="#">
-                <h2>match results</h2>
-                   <img src="./images/icons/score.png"class="minigallery">
-                </a>
-            
-              </article>
-              <div>
-                                <!-- image gallery  -->
-
-                <div class="homepage-gallery">
-                  
-                  <h2>Event Gallery</h2>
-                  <!-- <div class="gallery-row">
-                    <img src="./images/website gallery/event1.jpg" alt="Tournament Event 1" class="gallery-img">
-                    <img src="./images/website gallery/event2.jpg" alt="Tournament Event 2" class="gallery-img">
-                    <img src="./images/website gallery/event3.jpg" alt="Tournament Event 3" class="gallery-img">
-                    <img src="./images/website gallery/event4.jpg" alt="Tournament Event 4" class="gallery-img">
-                  </div> -->
-                </div>
-              <article class="article-five">
-                <a href="#">
-                <h2>Gallery</h2>
-                   <img src="./images/gallery.png" class="minigallery">
-                </a>
-              
-            </div>
-           </div>
-             
-            
-           
-             
-            
-        </main>
-      
-           <!-- footer -->
-           <div class="container-footer">
-               <footer>
-               <div><p>&copy; 2025 Blouberg. All Rights reserved</p></div>
-                <div><p>follow us</p></div>
-                <div class="socialMediaContainer">
-                  
-                    <img src="./images/icons/socialMediaIcons/facebook.png" id="fb">
-                    <img src="./images/icons/socialMediaIcons/instagram.png" id="insta">
-                    <img src="./images/icons/socialMediaIcons/youtube.png " id="youtube">
-                    <img src="./images/icons/socialMediaIcons/social.png" id="whatsapp">
-                    <img src="./images/icons/socialMediaIcons/tik-tok.png" id="tik-tok">
-                    <img src="./images/icons/socialMediaIcons/twitter.png" id="tik-tok">
-                </div>
-             </footer>
-            </div>
-       
-
-            <script src="/scripts/main.js"></script>
-    </body>
+  <script src="./scripts/main.js"></script>
+</body>
 </html>

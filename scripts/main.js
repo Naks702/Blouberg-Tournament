@@ -61,14 +61,61 @@ document.getElementById("sponsorForm").addEventListener("submit", function(e){
     })
     .then((response) =>response.json())
     .then((data)=>{
+      document.getElementById("sponsorFormDiv").innerHTML =
+  "<h2>Thank you! Your form has been submitted.</h2>";
       document.getElementById("error").innerHTML = 
       "Form was submitted successfully"+"<br>"+
       "First Name:" +data.firstname +"<br>"+
       "Last Name:" +data.lastName + "<br>"+
       "Email:" +data.email +"<br>"+
       "cellphone" + data.cellphone +"<br>"
+       window.location.href = "./Thankyou.html";
     })
+   
     .catch(error=>{
       document.getElementById("error").innerHTML ="error submitting your info" +error;
     })
 })
+
+function hamburgerMenu(){
+
+}
+
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+// JS for slideshows
+
+
+let slides = document.querySelector("#slides");
+let totalSlides = slides.children.length;
+let dotContainer = document.querySelector("#dots");
+let index = 0;
+
+for(let i=0; i<totalSlides; i++){
+  let dot  = document.createElement('span');
+  dot.classList.add('dot');
+  dot.addEventListener("click", function(i){
+  dotContainer.appendChild(dot);
+  })
+}
+
+let dots  = document.querySelectorAll(".dot")
+updateSlide();
+
+function changeSlide(d){
+  index = (index + d + totalSlides) % totalSlides;
+  updateSlide();
+}
+
+function goToSlide(n){
+  index = n;
+  updateSlide();
+}
+function updateSlide(){
+  slides.slides.transform=`translateX (-${index * 100}%)`;
+  dots.forEach(dot.classList.remove("active"))
+  dots[index].classList.add('active');
+}
+setInterval(() =>changeSlide(1), 5000);
