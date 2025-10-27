@@ -305,7 +305,11 @@ width:50%;
  height: auto;
 
 }
-
+#scoresheet >span{
+    background-color: #f1750f;
+    color: white;
+    font-weight:bolder;
+}
 .slideImg{
     display: grid;
 }

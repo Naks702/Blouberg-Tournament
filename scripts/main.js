@@ -86,3 +86,24 @@ updateSlide();
 
 // Auto slide every 5 seconds
 setInterval(() => changeSlide(1), 5000);
+
+
+//JQuery to show scoresheet from different fixture
+
+$(document).ready(function(){
+  let $scores = $("#scoresheet");
+  let totalWidth = $scores.width();
+  let screenWidth = $(window).width();
+
+
+  function animateScores(){
+    $scores.css({left:screenWidth})
+    $scores.animate(
+      {left: -totalWidth},
+      2000,
+      "linear",
+      
+    )
+  }
+  animateScores();
+})
