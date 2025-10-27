@@ -39,10 +39,17 @@ function toggleMenu() {
 /* ===============================
    SLIDER (HOMEPAGE)
 ================================== */
+
 let slides = document.querySelector("#slides");
+Array.from(slides.children).forEach(slides=>{
+  if(!slides.getAttribute("src")||slides.getAttribute("src").trim()===""){
+    slides.remove();
+  }
+})
 let totalSlides = slides.children.length;
 let dotContainer = document.querySelector("#dots");
 let index = 0;
+
 
 // create dots
 for (let i = 0; i < totalSlides; i++) {
