@@ -90,20 +90,27 @@ setInterval(() => changeSlide(1), 5000);
 
 //JQuery to show scoresheet from different fixture
 
+
 $(document).ready(function(){
-  let $scores = $("#scoresheet");
-  let totalWidth = $scores.width();
-  let screenWidth = $(window).width();
-
-
-  function animateScores(){
-    $scores.css({left:screenWidth})
-    $scores.animate(
-      {left: -totalWidth},
-      2000,
-      "linear",
+  
+    function moveRight(){
       
-    )
-  }
-  animateScores();
+    $("#scoresheet")
+    .css("left", "0px")
+    .animate({left: "1000px"}, 5000, "linear",moveLeft)
+}
+ moveRight();
+
+  function moveLeft(){
+    ("left", "0px"),
+    $("#scoresheet")
+    
+    .animate({left: "1000px"},
+       dura5000, 
+       easing: "Swing",
+       moveRight)
+}
+
+   
+
 })

@@ -1,4 +1,56 @@
-<p class="subtext-scriptlarge">Grade 12</p>
-<h2>Additional Information</h2>
-<p>Did you know that Rosebank College has past exam papers to help you study for Matric? Just visit any Campus Library, request the papers and you'll get access to our libraries to study.</p>
-<p><a class="button button--primary"></a><a></a><a href="/{localLink:umb://document/ee6eb7a5e280499abfa44991425a270e}" title="Grade 12's" class="button button--outlined button--sm button--primary" data-anchor="#">Learn More</a><span></span><span></span> <a href="/{localLink:umb://media/d8281b9e26414f569c5031c9280b5eb8}" title="Matric Calendar October And November Final PDF" class="button--primary button" data-anchor="#">Matric Study Planner</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smooth Bounce Animation</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #scoresheet {
+      position: relative;
+      width: 200px;
+      padding: 10px;
+      background-color: lightblue;
+      font-weight: bold;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="scoresheet">Smooth Bouncing Text</div>
+
+<script>
+$(document).ready(function(){
+  function moveRight() {
+    $("#scoresheet").animate(
+      { left: "600px" },
+      {
+        duration: 3000,
+        easing: "swing", // slows near the end
+        complete: moveLeft
+      }
+    );
+  }
+
+  function moveLeft() {
+    $("#scoresheet").animate(
+      { left: "0px" },
+      {
+        duration: 3000,
+        easing: "swing",
+        complete: moveRight
+      }
+    );
+  }
+
+  // Start automatically
+  moveRight();
+});
+</script>
+
+</body>
+</html>
