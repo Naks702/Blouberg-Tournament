@@ -41,76 +41,124 @@ function toggleMenu() {
 ================================== */
 
 let slides = document.querySelector("#slides");
-Array.from(slides.children).forEach(slides=>{
-  if(!slides.getAttribute("src")||slides.getAttribute("src").trim()===""){
-    slides.remove();
+
+// Remove empty slides
+Array.from(slides.children).forEach(slide => {
+  if (!slide.getAttribute("src") || slide.getAttribute("src").trim() === "") {
+    slide.remove();
   }
-})
+});
+
 let totalSlides = slides.children.length;
 let dotContainer = document.querySelector("#dots");
-let index = 0;
+let index = 1; // Start from the first "real" slide
 
+// Clone first and last slide for seamless looping
+let firstClone = slides.children[0].cloneNode(true);
+let lastClone = slides.children[totalSlides - 1].cloneNode(true);
 
-// create dots
+slides.appendChild(firstClone);
+slides.insertBefore(lastClone, slides.firstElementChild);
+
+slides.style.transform = `translateX(-${index * 100}%)`;
+
+let dots = [];
 for (let i = 0; i < totalSlides; i++) {
   let dot = document.createElement("span");
   dot.classList.add("dot");
   dot.addEventListener("click", () => goToSlide(i));
   dotContainer.appendChild(dot);
+  dots.push(dot);
 }
 
-let dots = document.querySelectorAll(".dot");
-
 function updateSlide() {
+  slides.style.transition = "transform 0.6s ease-in-out";
   slides.style.transform = `translateX(-${index * 100}%)`;
-  dots.forEach((dot) => dot.classList.remove("active"));
-  dots[index].classList.add("active");
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[(index - 1 + totalSlides) % totalSlides].classList.add("active");
 }
 
 function changeSlide(d) {
-  index = (index + d + totalSlides) % totalSlides;
+  if (index >= totalSlides + 1) return;
+  index += d;
   updateSlide();
 }
+
+slides.addEventListener("transitionend", () => {
+  if (slides.children[index].isSameNode(firstClone)) {
+    slides.style.transition = "none";
+    index = 1;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+  if (slides.children[index].isSameNode(lastClone)) {
+    slides.style.transition = "none";
+    index = totalSlides;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+});
 
 function goToSlide(n) {
-  index = n;
+  index = n + 1; // account for the clone offset
   updateSlide();
 }
 
-// Prev / Next buttons
+// Buttons
 document.getElementById("prevBtn").addEventListener("click", () => changeSlide(-1));
 document.getElementById("nextBtn").addEventListener("click", () => changeSlide(1));
-
-// Initialize
-updateSlide();
 
 // Auto slide every 5 seconds
 setInterval(() => changeSlide(1), 5000);
 
+// Initialize
+updateSlide();
 
-//JQuery to show scoresheet from different fixture
-
+//JQuery to show scoresheet from different fixtures
 
 $(document).ready(function(){
-  
-    function moveRight(){
-      
-    $("#scoresheet")
-    .css("left", "0px")
-    .animate({left: "1000px"}, 5000, "linear",moveLeft)
-}
- moveRight();
+  var $scoresheet = $("#scoresheet");
+   
+  function move(){
+    var width = $(window).width();
+    var containerWidth = $("#scoresheet").width()
+    var elementWidth = $scoresheet.outerWidth();
 
-  function moveLeft(){
-    ("left", "0px"),
-    $("#scoresheet")
+    $scoresheet.css({left: containerWidth})
+    $scoresheet.animate({left: -elementWidth},
+      {duration:25000,
+        easing: "linear",
+        complete: move
+      }
+
+    )
     
-    .animate({left: "1000px"},
-       dura5000, 
-       easing: "Swing",
-       moveRight)
-}
+  }
+
+  $scoresheet.hover(
+    function(){$(this).stop(true);},
+    function(){move()}
+                    
+  
+);
+
+
+  move();
 
    
-
 })
+//Script for our search functionality
+
+
+let searchTerm = document.getElementById("searchInput");
+let matchList = document.getElementById("list");
+let matches = matchList.getElementsByTagName("li");
+searchTerm.addEventListener('keyup', searchSite)
+
+function searchSite(){
+ const filter  = searchTerm.value.toLowerCase();
+ for (let i = 0; i < matches.length; i++) {
+  const text = matches[i].textContent.toLowerCase();
+  matches[i].style.display = text.includes(filter) ? "" : "none";
+  
+ }
+
+}

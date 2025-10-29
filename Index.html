@@ -6,6 +6,8 @@
   <title>Blouberg Tournament | Home</title>
   <link rel="icon" type="image/x-icon" href="./images/icons/favicon-96x96.png" />
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
   <link rel="stylesheet" href="./styles/main.css" />
 </head>
 
@@ -36,12 +38,12 @@
   <!-- ===== MAIN CONTENT ===== -->
   <main>
     <!-- === HERO SLIDER === -->
-    <section class="slider" aria-label="Blouberg Tournament Highlights">
+    <div class="slider" aria-label="Blouberg Tournament Highlights">
       <div class="slides" id="slides">
         <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-30782367.jpg" alt="Soccer match action" />
         <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-31105911.jpg" alt="Tournament crowd cheering" />
         <img src="./images/website gallery/pexels-thato-moiketsi-909645793-32422417.jpg" alt="Players celebrating victory" />
-    <img src="" alt="">
+        <img src="" alt="">
       </div>
 
       <!-- Slider Controls -->
@@ -50,20 +52,18 @@
 
       <!-- Slide Dots -->
       <div class="dots" id="dots"></div>
-    </section>
- 
-      <div id="scoresheet">
-              <span class="match"><span class="team">Real Rovers</span> <span class="score">1 – 2</span> Mabeteng</span>
-               <span class="match"><span class="team">Blouber Tiger</span> <span class="score">1 – 3</span> Sefihla</span>
-                <span class="match"><span class="team">Blouberg Masters </span> <span class="score">3 – 3</span> Sefihla Masters</span>
-            </div>
- 
-          <button id="btn"> test</button>
+    </div>
 
-
-
-
-
+     <div id="scoresheet-container">
+       <div id="scoresheet">
+        
+        <ul class= "fixtures"><h2>Weekend Matches:</h2>
+         <li class="match">Real Rovers <span class="score">1 - 2 </span>Tzaeen FC |</li>
+         <li class="match">Real Rovers <span class="score">0 - 2 </span> Sefihla Masters |</li>
+         <li class="match">Blouberg Masters <span class="score">1 - 2 </span> Tzaeen FC</li>
+        </ul>
+     </div>    
+    </div>
     <!-- === HERO INFO === -->
     <section class="hero-section">
       <div class="h1headers">
