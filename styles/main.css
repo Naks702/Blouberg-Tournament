@@ -319,6 +319,11 @@ width:50%;
     left: 100%;
   
 }
+.strip{
+background-color:  rgba(255, 168, 6, 0.63);
+height: auto;
+width: 100%;
+}
 #scoresheet-container{
  position: relative;
  width: 100%;
