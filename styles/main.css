@@ -466,7 +466,7 @@ a {
 /* service page style */
 
 
-.card1, .card2, .card3,.card4{
+.card{
     border-radius: 10px;
     border: #f1750f solid 3px;
     box-shadow: 4px 4px 4px 4px rgba(255, 168, 6, 0.63);
@@ -475,14 +475,41 @@ a {
 }
 .searchbar{
     text-align: center;
-    margin-bottom: 20px;    
+    position: relative;
+    display: inline-block;  
+    cursor: pointer; 
+    height: 45px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 25px;
 
 }
 #searchInput{
   
   border-radius: 25px;
-  border: 3px solid #f1750f;   
+  border: 3px solid #f1750f;
+  width: 30%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  outline: none;
+  font-weight: 500;
+  background: transparent;
+  display: flex;
+
 }
+#searchInput input{
+width: 0;
+outline: none;
+font-weight: 500;
+background: transparent;
+
+}
+.searchbar a .fa{
+  color:#f1750f;
+  background-color: white;
+  font-size: 35px;
+}
+
 input[type = text ]{
     width: 40%;
     padding: 8px;
@@ -784,5 +811,10 @@ flex-direction: column;
 }
 
 .tournament{
-    background-image: url("https://github.com/Naks702/Blouberg-Tournament/blob/master/images/website%20gallery/jeandre-kleynhans-vCcgb9UeN6w-unsplash-min.jpg");
+    background:url("/images/website%20gallery/jeandre-kleynhans-vCcgb9UeN6w-unsplash-min.jpg");
+    background-position: center;
+    
+}
+.tournaments,.column1{
+    color: white;
 }
