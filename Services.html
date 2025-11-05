@@ -1,94 +1,83 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link rel="icon" type="image/x-icon" href="./images/icons/favicon-96x96.png">
+  <link rel="stylesheet" href="./styles/main.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <meta name="description" content="Discover the range of services offered by Blouberg Tournament, including our soup kitchen, coaching, gym facilities, and social development initiatives.">
+  <meta name="keywords" content="Blouberg Tournament Services, Soup Kitchen, Coaching, Gym Service, Social Development, Community Support"> 
+</head>
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Services</title>
-        <link rel="icon" type="image/x-icon" href="./images/icons/favicon-96x96.png">
-        <link rel="stylesheet" href="./styles/main.css">
-    </head>
-    <body>
-             <header>
-             <div class="logo">
-              <img src="./images/logos/blouberg.png" id="logo"
-               srcset="images/logos/blouberg.png 2x, images/logos/blouberg.png 3x,"
-               alt="Logo"
-              >
-         </div>
-               
-       
-        <!-- we aiming for hamburger menu once we have javascript for mobile -->
-     <nav>
-         <div class="mainNavContainer"> 
-                <a href="Index.html">Home</a>
-                <a href="AboutUs.html">About Us</a>
-                <a href="Services.html">Services</a>
-                <a href="Tournaments.html">Tournaments</a>
-                <a href="./ContactUs.html">Contact Us</a>  
-                
-               
-               </div>
-                
-        </nav>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./images/logos/blouberg.png" id="logo"
+        srcset="images/logos/blouberg.png 2x, images/logos/blouberg.png 3x"
+        alt="Logo">
+    </div>
 
-        </header>
-        <main>
-         <div class="h1headers">
-          
-            <h1>Our Services</h1>
-         </div> 
-         <div class ="searchbar">
-            <input type="text" id="searchInput" placeholder="Search services..."><br>
-            <button id="searchButton" onclick="searchSite()">Search</button> 
-         <div class="services">
-            <p>At Blouberg Tournament, we are dedicated to providing a range of services that go beyond just organizing football matches. 
-                  Our mission is to foster community engagement, promote healthy lifestyles, and support those in need. Here are some of the key services we offer:</p>
-         </div>
-             
-         <div class="article-Container">
-               <div class="card1">
-                     <article>
-                  <h3>Soup kitchen for the poor</h3>
-                  <p>We run a soup kitchen during our tournaments to provide nutritious meals to those in need. Our goal is to ensure that everyone,
-                      regardless of their circumstances, has access to food and warmth.</p>
-                     </article>
-         </div>
-            <div class="card2">
-               <h3>Coaching service</h3>
-               <article>
-                  <p>Our coaching service is designed to help players of all ages and skill levels improve their game. 
-                     We offer training sessions, workshops, and one-on-one coaching to help players reach their full potential on the field.</p>
-               </article>
-            </div>
-               <div class="card3">
-               <h3>Gym service</h3>
-               <article>
-                  <p>We provide access to gym facilities and fitness programs to help players maintain peak physical condition. 
-                     Our gym service includes strength training, cardio workouts, and flexibility exercises tailored to the needs of football players.</p>
-               </article>
-               </div>
-               
-               <div class="card4">
-                  <h3>Social development service</h3>
-                  <article>
-                  <p>With Stakeholder of local social development service we are committed to help in this regard
-                  We believe in the power of sports to bring about positive change in communities. 
-                  Our social development service focuses on using football as a tool to promote teamwork, discipline, and leadership among youth.</p>
-                  </article>
-            </div>
-         </div>
+    <nav>
+      <div class="mainNavContainer">
+        <a href="Index.html">Home</a>
+        <a href="AboutUs.html">About Us</a>
+        <a href="Services.html">Services</a>
+        <a href="Tournaments.html">Tournaments</a>
+        <a href="ContactUs.html">Contact Us</a>
+      </div>      
+     <p></p>
+    </nav>
+  </header>
 
-             <ul id="list">
-               <li>Cars</li>
-               <li>Houses</li>
-             </ul>
-            
-        </main>
-     
-<!-- ===== FOOTER ===== -->
+  <main>
+    <div class="h1headers">
+      <h1>Our Services</h1>
+    </div>
+
+    <div class="searchbar">
+      <input type="text" id="searchInput" placeholder="Search services...">
+      <a href="#">
+        <i class="fa fa-search"></i>
+      </a>
+    </div>
+
+    <div class="services">
+      <p>At Blouberg Tournament, we are dedicated to providing a range of services that go beyond just organizing football matches. 
+        Our mission is to foster community engagement, promote healthy lifestyles, and support those in need. Here are some of the key services we offer:</p>
+    </div>
+
+    <div class="article-Container">
+      <div class="card">
+        <h3 class="card-title">Soup kitchen for the poor</h3>
+        <p class="card-description">We run a soup kitchen during our tournaments to provide nutritious meals to those in need. Our goal is to ensure that everyone,
+          regardless of their circumstances, has access to food and warmth.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Coaching service</h3>
+        <p class="card-description">Our coaching service is designed to help players of all ages and skill levels improve their game. 
+          We offer training sessions, workshops, and one-on-one coaching to help players reach their full potential on the field.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Gym service</h3>
+        <p class="card-description">We provide access to gym facilities and fitness programs to help players maintain peak physical condition. 
+          Our gym service includes strength training, cardio workouts, and flexibility exercises tailored to the needs of football players.</p>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Social development service</h3>
+        <p class="card-description">With stakeholders of local social development services, we are committed to helping in this regard.
+          We believe in the power of sports to bring about positive change in communities. 
+          Our social development service focuses on using football as a tool to promote teamwork, discipline, and leadership among youth.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
-   
     <div class="socialMediaContainer">
       <img src="./images/icons/socialMediaIcons/facebook.png" alt="Facebook">
       <img src="./images/icons/socialMediaIcons/instagram.png" alt="Instagram">
@@ -97,13 +86,5 @@
       <img src="./images/icons/socialMediaIcons/tik-tok.png" alt="TikTok">
       <img src="./images/icons/socialMediaIcons/twitter.png" alt="Twitter">
     </div>
-      <p>&copy; 2025 Blouberg. All Rights Reserved</p>
+    <p>&copy; 2025 Blouberg. All Rights Reserved</p>
   </footer>
-
-  <script src="./scripts/main.js"></script>
-
-
-
-            <script src="/scripts/main.js"></script>
-    </body>
-</html>

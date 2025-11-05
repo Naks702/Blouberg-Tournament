@@ -206,3 +206,6 @@ Added
 
 Tournament page created.
 
+[1.2.0]
+working on seo
+

@@ -7,8 +7,11 @@
   <link rel="icon" type="image/x-icon" href="./images/icons/favicon-96x96.png" />
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-
   <link rel="stylesheet" href="./styles/main.css" />
+  <!-- seo -->
+  <meta name="description" content="Welcome to Blouberg Tournament, where football meets community spirit. Join us for thrilling matches, community support, and unforgettable experiences." />
+  <meta name="keywords" content="Blouberg Tournament, Football, Community, Sports Events, Local Tournaments, Soccer, Youth Development" />
+  <meta name="author" content="Blouberg Tournament Team" /> 
 </head>
 
 <body>
@@ -37,26 +40,33 @@
 
   <!-- ===== MAIN CONTENT ===== -->
   <main>
-    <!-- === HERO SLIDER === -->
-    <div class="slider" aria-label="Blouberg Tournament Highlights">
-      <div class="slides" id="slides">
-        <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-30782367.jpg" alt="Soccer match action" />
-        <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-31105911.jpg" alt="Tournament crowd cheering" />
-        <img src="./images/website gallery/pexels-thato-moiketsi-909645793-32422417.jpg" alt="Players celebrating victory" />
-        <img src="" alt="">
+    <div class="gallery-container">
+      <div class="slides fade">
+         <div class="slideCaption">picture 1</div>
+         <img src="./images/website gallery/pexels-thato-moiketsi-909645793-32422417.jpg">
       </div>
+      <div class="slides fade">
+       <div class="slideCaption">picture 2</div>
+         <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-30782367.jpg">
+      </div>
+      <div class="slides fade">
+         <div class="slideCaption">picture 2</div>
+         <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-31105911.jpg">
+      </div>
+      <div class="slides">
 
-      <!-- Slider Controls -->
+      </div>
+           <!-- Slider Controls -->
       <button class="prevBtn" id="prevBtn" aria-label="Previous slide">&#10094;</button>
       <button class="nextBtn" id="nextBtn" aria-label="Next slide">&#10095;</button>
 
       <!-- Slide Dots -->
-      <div class="dots" id="dots"></div>
+     <div class="dots" id="dots"></div>
+
     </div>
 <div class="strip">
     <div id="scoresheet-container">
        <div id="scoresheet">
-        
         <ul class= "fixtures"><h2>Weekend Matches:</h2>
          <li class="match">Real Rovers <span class="score">1 - 2 </span>Tzaeen FC |</li>
          <li class="match">Real Rovers <span class="score">0 - 2 </span> Sefihla Masters |</li>

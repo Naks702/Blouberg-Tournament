@@ -5,11 +5,12 @@ body, html {
     background-color:#f8c69a ;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 2rem;
-    padding-top: 110px;
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     height: 100%;
-    
+    overflow-x: hidden;
+   
 }
 span{
     
@@ -19,6 +20,7 @@ span{
 main{
  margin: 50px;
  flex: 1;
+
 }
 
 a:link{
@@ -310,13 +312,13 @@ width:50%;
 }
 #scoresheet{
    position: absolute;
-    background-color: #f1750f;
+    background-color: rgba(255, 168, 6, 0.63); ;
     white-space: nowrap;
     margin: 0;
     height: auto;
     padding: 10px 20px;
     top:10px;
-    left: 100%;
+ 
   
 }
 .strip{
@@ -469,7 +471,7 @@ a {
 /* service page style */
 
 
-.card1, .card2, .card3,.card4{
+.card{
     border-radius: 10px;
     border: #f1750f solid 3px;
     box-shadow: 4px 4px 4px 4px rgba(255, 168, 6, 0.63);
@@ -478,9 +480,41 @@ a {
 }
 .searchbar{
     text-align: center;
-    margin-bottom: 20px;    
+    position: relative;
+    display: inline-block;  
+    cursor: pointer; 
+    height: 45px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 25px;
 
 }
+#searchInput{
+  
+  border-radius: 25px;
+  border: 3px solid #f1750f;
+  width: 30%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  outline: none;
+  font-weight: 500;
+  background: transparent;
+  display: flex;
+
+}
+#searchInput input{
+width: 0;
+outline: none;
+font-weight: 500;
+background: transparent;
+
+}
+.searchbar a .fa{
+  color:#f1750f;
+  background-color: white;
+  font-size: 35px;
+}
+
 input[type = text ]{
     width: 40%;
     padding: 8px;
@@ -634,34 +668,25 @@ flex-direction: column;
 .Ourhistory, .aboutUsPurpose, .whoArewePurpose, .values{
     padding: 5px;
 }
-/* hamburgerMenu  styling*/
-.hamburgerMenu{
-    width: 40px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+/* hamburger menu css */
+.checkbtn{
+    font-size: 30px;
     cursor: pointer;
-}
-.hamburgerMenu{
- overflow: hidden;
- position: relative;
+    display: block;
+    width: 20px;
+    height: 25px;
+    color: black;
 
 }
-
- .bar{
-    width: 100%;
-    height: 10px;
-    color:orange;
-
- }
- .hamburger{
+#mobi-menu:checked ~ .mainNavContainer{
     display: flex;
- }
- 
-
 }
 
+.mobi-menuIcon{
+  display: block;
+}
+     
+}
 
 
 
@@ -684,23 +709,13 @@ flex-direction: column;
 }
 
 /* slider images */
-.slider{
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 30px auto ;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    margin-bottom: 15px;
-  
-}
-.slides{
+
+/* .slides{
     display: flex;
     gap: 5px;
     transition: transform 0.6s ease-in-out;
 
-}
+} */
 #slides img{
     width: 500px;
     height: auto;
@@ -734,6 +749,7 @@ flex-direction: column;
     cursor: pointer;
     font-size: 18px;
     border-radius: 50%;  
+    margin-top: -22px;
 }
 .prevBtn{
   left: 10px;
@@ -746,4 +762,55 @@ flex-direction: column;
 }
 #prevBtn:hover{
  background-color: #f1750f;
+}
+.gallery-container{
+  max-width: 400px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+}
+.slideCaption{
+    top: 0;
+    color: #f2f2f2;
+    position: absolute;
+    font-size: 12px;
+}
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+.active, .dot:hover{
+    background-color: #717171;
+
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade{
+    from{opacity: .4;}
+    to{opacity: 1;}
+}
+.slides{
+    display: none;
+}
+.slides img{
+    height: 600px;
+    border: 2px solid ;
+    border-radius: 25px;
+}
+
+.tournament{
+    background:url("/images/website%20gallery/jeandre-kleynhans-vCcgb9UeN6w-unsplash-min.jpg");
+    background-position: center;
+    
+}
+.tournaments,.column1{
+    color: white;
 }
