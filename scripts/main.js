@@ -145,43 +145,34 @@ $(window).on("resize", function (){
 
 //Script for our search functionality
 
-document.addEventListener("DOMContentLoaded", function() {
-      const searchInput = document.getElementById("searchInput");
-      const serviceCards = document.querySelectorAll(".article-Container .card");
-      searchInput.addEventListener("keyup", function(e) {
-        const searchValue = e.target.value.toLowerCase(); 
-        serviceCards.forEach(card => {
-          const title = card.querySelector(".card-title").textContent.toLowerCase();
-          const description = card.querySelector(".card-description").textContent.toLowerCase();
-          if (title.includes(searchValue) || description.includes(searchValue)) {
-            card.style.display = "block";   
-          } else {
-            card.style.display = "none";    
-          } 
-        });
-      } );
-    } );
+const cards = document.querySelectorAll(".card")
+const searchBtn = document.getElementById("searchBtn")
+const searchInput = document.getElementById("searchInput")
+searchBtn.addEventListener('click', () =>{
+  const query =searchInput.value.toLowerCase().trim();
+  cards.forEach(card =>{
+    const title = card.querySelector(".card-title").textContent.toLowerCase();
+    const description = card.querySelector(".card-description").textContent.toLowerCase();
 
-document.addEventListener("DOMContentLoaded", function() {
-  const hamburger = document.getElementById("hamburgerIcon");
-  const navMenu = document.getElementById("navLinks");
-  
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    document.body.classList.toggle("no-scroll"); // Prevent background scrolling
-  });
-  
-  // Close menu when clicking on links
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
-      document.body.classList.remove("no-scroll");
+    if(title.includes(query) || description.includes(query))
+      card.style.display = "flex";
+    else{
+      card.style.display = "none";
+    }
+
+  })
+})
+
+
+ 
+ // hamburger menu
+    const hamburger = document.querySelector(".hamburgerIcon");
+    const navLinks = document.getElementById("navLinks");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("active");
+      
     });
-  });
-});
     
     
    
-  
