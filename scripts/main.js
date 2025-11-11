@@ -38,62 +38,49 @@ function formValidation() {
    SLIDER (HOMEPAGE)
 ================================== */
 
-let slideIndex = 1;
-showSlides();
-
-function showSlides(n){
-  let i;
-  let slides = document.getElementsByClassName("slides")
-  let dots = document.getElementsByClassName("dots")
-   for(i = 0; i<slides.length; i++){
-    slides[i].style.display="none"
-   }
-   slideIndex++;
-   if(slideIndex >slides.length){
-    slideIndex =1
-   }
-   for(i=0; i<dots.length; i++){
-     dots[i].className = dots[i].className.replace("active","")
-   }
-   slides[slideIndex -1].style.display ="block";
-   dots[slideIndex - 1].className += "active"
-   setTimeout(showSlides, 2000)
-}
-function updateSlide() {
-  slides.style.transition = "transform 0.6s ease-in-out";
-  slides.style.transform = `translateX(-${index * 100}%)`;
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[(index - 1 + totalSlides) % totalSlides].classList.add("active");
-}
-slides.addEventListener("transitionend", () => {
-  if (slides.children[index].isSameNode(firstClone)) {
-    slides.style.transition = "none";
-    index = 1;
-    slides.style.transform = `translateX(-${index * 100}%)`;
+let gallery = document.querySelector('.gallery-container');
+gallery = document.querySelector('.gallery');
+slides = document.querySelectorAll('.slide');
+let index = 0;
+function showSlide(i) {
+  index += i; 
+  if (index < 0) {
+    index = slides.length - 1;
+  } 
+  else if (index >= slides.length) {
+    index = 0;
   }
-  if (slides.children[index].isSameNode(lastClone)) {
-    slides.style.transition = "none";
-    index = totalSlides;
-    slides.style.transform = `translateX(-${index * 100}%)`;
-  }
- });
-
-function changeSlide(n) {
-  index = n + 1; // account for the clone offset
-  updateSlide();
+  gallery.style.transform = `translateX(${-index * 100}%)`;
 }
 
-// Buttons
-document.getElementById("prevBtn").addEventListener("click", () => changeSlide(-1));
-document.getElementById("nextBtn").addEventListener("click", () => changeSlide(1));
+setInterval(() => {
+  showSlide(1);
+}, 5000);
+// slide controls
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+prevBtn.addEventListener('click', () => {
+  showSlide(-1);
+});
+nextBtn.addEventListener('click', () => {
+  showSlide(1);
+}); 
 
-// Auto slide every 5 seconds
-setInterval(() => changeSlide(1), 5000);
 
-// Initialize
-updateSlide();
+//slide dots
+const dots = document.querySelectorAll('.dot');
+dots.forEach((dot, idx) => {
+  dot.addEventListener('click', () => {
+    currentSlide(idx + 1);
+  });
+});
 
-//JQuery to show scoresheet from different fixtures
+/* ===============================
+   END OF SLIDER
+================================== */
+
+
+
 
 $(document).ready(function(){
   var $scoresheet = $("#scoresheet");
@@ -163,7 +150,6 @@ searchBtn.addEventListener('click', () =>{
   })
 })
 
-<<<<<<< HEAD
 
  
  // hamburger menu
@@ -175,40 +161,76 @@ searchBtn.addEventListener('click', () =>{
       
     });
     
-    
-   
-=======
-//         serviceCards.forEach(card => {
-//           const text = card.textContent.toLowerCase();
-//           if (text.includes(searchValue)) {
-//             card.style.display = "block";
-//           } else {
-//             card.style.display = "none";
-//           }
-//         });
-//       });
-//     });
-document.addEventListener("DOMContentLoaded", function() {
-      const searchInput = document.getElementById("searchInput");
-      const serviceCards = document.querySelectorAll(".article-Container .card");
-      searchInput.addEventListener("keyup", function(e) {
-        const searchValue = e.target.value.toLowerCase(); 
-        serviceCards.forEach(card => {
-          const title = card.querySelector(".card-title").textContent.toLowerCase();
-          const description = card.querySelector(".card-description").textContent.toLowerCase();
-          if (title.includes(searchValue) || description.includes(searchValue)) {
-            card.style.display = "block";   
-          } else {
-            card.style.display = "none";    
-          } 
-        });
-      } );
-    } );
-    // hamburger menu
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".mainNavContainer");
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      
+    // Close menu when a link is clicked (for better UX on mobile)
+    const navLinkItems = document.querySelectorAll(".nav-link");
+    navLinkItems.forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("active");
+      });
     });
->>>>>>> ca1c177b66dd7d62060d92d4a8564b554b50bb96
+    // end of hamburger menu
+
+    //enquiry form validation
+    function validateEnquiryForm() {
+      let isValid = true;
+      let name = document.getElementById("name").value.trim();
+      let phone = document.getElementById("phone").value.trim();
+      let enquiryType = document.getElementById("enquiry-type").value;
+      let donate = document.getElementById("donate").value;
+      let donationAmount = document.getElementById("donation-amount").value.trim();
+
+      document.getElementById("validateName").innerHTML = "";
+      document.getElementById("validatePhone").innerHTML = "";
+      document.getElementById("validateEnquiryType").innerHTML = "";
+      document.getElementById("validateDonate").innerHTML = "";
+      document.getElementById("validateDonationAmount").innerHTML = "";
+
+      if (name === "") {
+        document.getElementById("validateName").innerHTML = "Enter your name";
+        isValid = false;
+      } else if (phone === "" || phone.length !== 10 || isNaN(phone)) {
+        document.getElementById("validatePhone").innerHTML = "Enter valid phone number";
+        isValid = false;
+      } else if (enquiryType === "") {  
+        document.getElementById("validateEnquiryType").innerHTML = "Select an enquiry type";
+        isValid = false;
+      } else if (donate === "") {  
+        document.getElementById("validateDonate").innerHTML = "Select donation preference";
+        isValid = false;
+      } else if (donate === "yes" && (donationAmount === "" || isNaN(donationAmount) || Number(donationAmount) <= 0)) { 
+        document.getElementById("validateDonationAmount").innerHTML = "Enter valid donation amount";
+        isValid = false;
+      } 
+      return isValid;
+
+    }   
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+$(document).ready(function() {
+  $(".collapsible").click(function() {
+    const content = $(this).next(".content");
+    
+    // Close other open sections
+    $(".content").not(content).slideUp();
+    
+    // Toggle the one clicked
+    content.slideToggle();
+    
+    // Optional active highlight
+    $(".collapsible").not(this).removeClass("active");
+    $(this).toggleClass("active");
+  });
+});

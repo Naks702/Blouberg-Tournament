@@ -34,6 +34,7 @@
       <a href="Index.html" class="nav-link active">Home</a>
       <a href="AboutUs.html" class="nav-link">About Us</a>
       <a href="Services.html" class="nav-link">Services</a>
+      <a href="enquiry.html" class="nav-link">Enquiry</a>
       <a href="Tournaments.html" class="nav-link">Tournaments</a>
       <a href="ContactUs.html" class="nav-link">Contact Us</a>
     </div>
@@ -58,12 +59,16 @@
       <div class="slides">
 
       </div>
-           <!-- Slider Controls -->
-      <button class="prevBtn" id="prevBtn" aria-label="Previous slide">&#10094;</button>
-      <button class="nextBtn" id="nextBtn" aria-label="Next slide">&#10095;</button>
 
-      <!-- Slide Dots -->
-     <div class="dots" id="dots"></div>
+        <a class="prev" id ="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" id ="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 
     </div>
 
@@ -83,8 +88,10 @@
       <div class="h1headers">
         <h1>Blouberg Tournament</h1>
       </div>
+        <p>Blouberg Tournament is more than just a football competition; it's a community-driven initiative aimed at making a positive impact. 
+        Here are some of the key benefits of our tournament</p>
+      
       <h2>The Benefits of the Initiative</h2>
-
       <article class="article-one">
         <ul>
           <li>Keep the community informed with tournament updates, results, and highlights.</li>
@@ -118,10 +125,18 @@
       </article>
 
       <article class="article-five">
-        <a href="#">
-          <h2>Gallery</h2>
-          <img src="./images/gallery.png" class="minigallery" alt="Gallery Icon" />
-        </a>
+        <div class=" sponsors_logo_Container">
+          <h2> our sponsors</h2>
+          <!-- mini gallery showing sponsors logos -->
+
+          <img src="./images/icons/sponsor.png" class="minigallery" alt="Sponsor Icon" />
+          <img src="./images/icons/sponsor2.png" class="minigallery" alt="Sponsor Icon" />
+          <img src="./images/icons/sponsor3.png" class="minigallery" alt="Sponsor Icon" />
+          
+     
+        </div>
+        
+         
       </article>
     </section>
   </main>

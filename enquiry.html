@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blouberg Tournament | enquiry</title>
+  <link rel="icon" type="image/x-icon" href="./images/icons/favicon-96x96.png" />
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="./styles/main.css" />
+  <!-- seo -->
+  <meta name="description" content="Get in touch with the Blouberg Tournament team through our enquiry page. Whether you have questions about our services, tournaments, or sponsorship opportunities, we're here to help." />
+  <meta name="keywords" content="Blouberg Tournament Enquiry, Contact Blouberg Tournament, Sponsorship Questions, Service Inquiries, Tournament Information" />
+  <meta name="author" content="Blouberg Tournament Team" />
+</head>
+
+<body>
+ <!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="logo">
+    <img src="./images/logos/blouberg.png" id="logo" alt="Blouberg Tournament Logo" />
+  </div>
+
+  <!-- Hamburger Button -->
+  <button class="hamburger" id="hamburgerIcon" aria-label="Toggle Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="mainNavContainer" id="navLinks">
+      <a href="Index.html" class="nav-link active">Home</a>
+      <a href="AboutUs.html" class="nav-link">About Us</a>
+      <a href="Services.html" class="nav-link">Services</a>
+      <a href="Tournaments.html" class="nav-link">Tournaments</a>
+      <a href="ContactUs.html" class="nav-link">Contact Us</a>
+    </div>
+  </nav>
+</header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="enquiryPage">
+    <section class="enquiry-section">
+    <div class="enquiry-form-containers">
+       <h2>Enquiry Form</h2>
+    <form class="enquiry-form" action="#" method="post" id="enquiry-form">
+      <label for="name">Your Name:</label><br />
+      <span id="validateName"></span>
+      <input type="name"><br />
+      <label for="email">Your Email:</label><br />
+      <input type="email"><br />
+      <span id="validatePhone"></span>
+      <label for="phone">Your Phone Number:</label><br />
+      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number"><br />
+      <label for ="enquiry-type">Type of Enquiry:</label><br />
+      <span id="validateEnquiryType"></span>
+      <select id="enquiry-type" name="enquiry-type">
+        <option value="sponsors">sponsorship Enquiry</option>
+        <option value="service">Service Related</option>
+        <option value="tournament">Tournament Related</option>
+        <option value="other">Other</option>
+      </select><br />
+
+      <label for ="do you wish to donate?">Do you wish to donate?</label><br />
+      <span id="validateDonate"></span>
+      <select id="donate" name="donate">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="maybe later">Maybe Later</option>
+      </select><br />
+      <p>if yes indicate the amount</p>
+      <span id="validateDonationAmount"></span>
+      <label for="donation-amount">Donation Amount:</label><br />
+      <textarea id="donation-amount" name="donation-amount" rows="2" cols="30" placeholder="Enter Amount"></textarea><br />
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="4" cols="50"></textarea><br />
+
+
+      <input type="submit" value="Submit" />
+    </form>
+    </div>
+    </section>
+    <section class="general-info" >
+      <h2>General Enquiry Information</h2>
+      <p>For any general enquiries regarding the Blouberg Tournament, please feel free to reach out to us using the contact details below:</p>
+      <ul>
+        <li>Email: naks702@gmail.com</li>
+        <li>Phone: +27 123 456 7890</li>
+        <li>Address: 123 Football Lane, Blouberg, South Africa</li>
+      </ul>
+      <p>We look forward to hearing from you and assisting with your enquiries!</p>
+      <p><strong>Meet our management team</p></strong>
+      <div class ="management-team">
+        <div>
+          <p>Managin Director</p>
+          <img src="./images/website gallery/management/pexels-mustapha-damilola-458083529-30289347.jpg" alt="Managing Director" />
+        </div>
+        <div>
+          <p>Operations Manager</p>
+          <img src="./images/website gallery/management/pexels-ekaterina-bolovtsova-6077859.jpg" alt="Operations Manager" />
+        </div>
+      
+      
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="socialMediaContainer">
+      <img src="./images/icons/socialMediaIcons/facebook.png" alt="Facebook Icon" />
+      <img src="./images/icons/socialMediaIcons/instagram.png" alt="Instagram Icon" />
+      <img src="./images/icons/socialMediaIcons/youtube.png" alt="YouTube Icon" />
+      <img src="./images/icons/socialMediaIcons/social.png" alt="WhatsApp Icon" />
+      <img src="./images/icons/socialMediaIcons/tik-tok.png" alt="TikTok Icon" />
+      <img src="./images/icons/socialMediaIcons/twitter.png" alt="Twitter Icon" />
+    </div>
+
+    <p>&copy; 2025 Blouberg Tournament. All Rights Reserved.</p>
+  </footer>
+
+  <script src="./scripts/main.js"></script>
+</body>
+</html>

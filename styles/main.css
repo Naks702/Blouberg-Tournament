@@ -96,7 +96,7 @@ header{
     height: auto;
 }
 
-/* forms */
+/* contact us forms */
 .form-containers{
     display: grid;
     column-gap: 150px;
@@ -119,7 +119,34 @@ form{
     box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
 
 }
+.enquiry-form-containers{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
 
+}
+/* enquiry page styling */
+/* enquiry form inputs styling */
+input, textarea, select{
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    height: auto;
+    border: 2px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.general-info{
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+}
 
 input { 
     padding: 5px; 
@@ -129,8 +156,32 @@ input {
      text-align: center; 
      border: 2px solid;
      }
+.enquiryPage{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+.management-team{
+    display: grid;
+    gap: 20px;
+   
+    margin-top: 20px;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+}
+.management-team img{
+    width:auto;    
+    height: 400px; 
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
 
+}
+.management-team >div{
+    border: #f1750f solid 1px;
+}
 
+/* end * services page styling */ */
 .container{
     display: grid;
     column-gap: 100px;
@@ -190,11 +241,31 @@ img{
     border: #f1750f 2px solid;
    
 }
-.Ourhistory, .aboutUsPurpose, .whoArewePurpose, .values{
-    padding: 5px;
-    border-bottom: orange solid 3px;
-    box-shadow: #333333 10px;
+
+.collapsible {
+  background-color: rgba(255, 168, 6, 0.63);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
 }
+
+.active, .collapsible:hover {
+  background-color: #f1750f;
+}
+
+.content {
+  display: none;
+  padding: 0 18px;
+  background-color: #f1f1f1;
+}
+
+
+
 
 .mainDiv{
       display: block;
@@ -231,8 +302,8 @@ main{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  justify-content: space-between;
-    align-items: flex-start;
+  
+    align-items: center;
     margin: 20px 0 10px;
     padding: 10px;
     
@@ -344,6 +415,29 @@ margin-left: 35%;
 text-align: center;
 
 }
+/* gallery styling */
+.gallery-container{
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+ max-width: 1200px;
+    height: auto;
+
+  display: flex;
+ flex-direction: row;
+    justify-content: center;
+    column-gap: 5px;
+
+}
+.article-Container{
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+
 
 .card, .articles, .article-three, .article-four, .article-five {
     border-radius: 10px;
@@ -377,7 +471,7 @@ a {
  margin:auto;
  max-width: 100%;
 }
-.prevButton .nextButton{
+.prev .next{
     cursor: pointer;
     position:absolute;
     top: 50%;
@@ -522,25 +616,7 @@ background: transparent;
  
  
     }
-   /* .mainNavContainer{
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    font-size: 1rem;
-    line-height: 1rem;
-
-} */
-
-/* #mobi-menu:checked ~.mainNavContainer{
-    display: flex;
-} */
-/* .mobi-menuIcon{
-  display: block;
-} */
+ 
 img{
     max-width: 100%;
     height: auto;
@@ -702,11 +778,7 @@ flex-direction: column;
 }
 
 
-#slides img{
-    width: 500px;
-    height: auto;
-
-}
+/* gallery styling */
 .dots{
     text-align: center;
     margin-top:10px ;
@@ -724,7 +796,7 @@ flex-direction: column;
 .active{
     background-color: #333;
 }
-.prevBtn, .nextBtn{
+.prev, .next{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -737,24 +809,26 @@ flex-direction: column;
     border-radius: 50%;  
     margin-top: -22px;
 }
-.prevBtn{
+.prev{
   left: 10px;
 }
-.nextBtn{
-    right: 10px;
+.next{
+right: 10px;
 }
-#nextBtn:hover{
+#next:hover{
  background-color: #f1750f;
 }
-#prevBtn:hover{
+#prev:hover{
  background-color: #f1750f;
 }
-.gallery-container{
-  max-width: 400px;
-  position: relative;
-  margin: auto;
-  overflow: hidden;
-  width: 100%;
+.sponsors_logo_Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+
 }
 .slideCaption{
     top: 0;
@@ -783,13 +857,12 @@ flex-direction: column;
     from{opacity: .4;}
     to{opacity: 1;}
 }
-.slides{
-    display: none;
-}
+
 .slides img{
     height: 600px;
-    border: 2px solid ;
-    border-radius: 25px;
+    width: auto;
+    
+
 }
 
 .tournament{
