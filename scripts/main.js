@@ -181,3 +181,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
       } );
     } );
+    // hamburger menu
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".mainNavContainer");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      
+    });

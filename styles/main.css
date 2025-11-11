@@ -170,15 +170,10 @@ img{
 
 /* icon hamburger menu this css will be made functional with the use of Javascript*/
 
-/* .checkbtn{
-    font-size: 30px;
-    cursor: pointer;
-    display: block;
-    width: 20px;
-    height: 25px;
-    color: black;
-} */
+.hamburger{
+    display: none;
 
+}
 
 .container-footer{
   position: relative;  
@@ -534,25 +529,7 @@ input[type = text ]{
  
  
     }
-   /* .mainNavContainer{
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    font-size: 1rem;
-    line-height: 1rem;
-
-} */
-
-/* #mobi-menu:checked ~.mainNavContainer{
-    display: flex;
-} */
-/* .mobi-menuIcon{
-  display: block;
-} */
+ 
 img{
     max-width: 100%;
     height: auto;
@@ -577,17 +554,27 @@ img{
  }
 
  /* the aim is to achieve stacked navigation menu items to fit small screen */
- .mainNavContainer{
-  display: none;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  flex-direction: column;
-  text-align: center;
-
- }
-
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1100;
+    }
+    .mainNavContainer{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(255, 168, 6, 0.63);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 0;
+    }
   .mainNavContainer a {
     color: white; 
     margin: 1px;
@@ -684,6 +671,14 @@ flex-direction: column;
 
 .mobi-menuIcon{
   display: block;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color:#f1750f;
+    right: 30px;
 }
      
 }
