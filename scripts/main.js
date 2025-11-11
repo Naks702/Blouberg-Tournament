@@ -32,9 +32,7 @@ function formValidation() {
   return isValid;
 }
 
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
-}
+
 
 /* ===============================
    SLIDER (HOMEPAGE)
@@ -78,7 +76,7 @@ slides.addEventListener("transitionend", () => {
     index = totalSlides;
     slides.style.transform = `translateX(-${index * 100}%)`;
   }
-});
+ });
 
 function changeSlide(n) {
   index = n + 1; // account for the clone offset
@@ -147,24 +145,6 @@ $(window).on("resize", function (){
 
 //Script for our search functionality
 
-
-// document.addEventListener("DOMContentLoaded", function() {
-//       const searchInput = document.getElementById("searchInput");
-//       const serviceCards = document.querySelectorAll(".article-Container .card");
-
-//       searchInput.addEventListener("keyup", function(e) {
-//         const searchValue = e.target.value.toLowerCase();
-
-//         serviceCards.forEach(card => {
-//           const text = card.textContent.toLowerCase();
-//           if (text.includes(searchValue)) {
-//             card.style.display = "block";
-//           } else {
-//             card.style.display = "none";
-//           }
-//         });
-//       });
-//     });
 document.addEventListener("DOMContentLoaded", function() {
       const searchInput = document.getElementById("searchInput");
       const serviceCards = document.querySelectorAll(".article-Container .card");
@@ -181,3 +161,27 @@ document.addEventListener("DOMContentLoaded", function() {
         });
       } );
     } );
+
+document.addEventListener("DOMContentLoaded", function() {
+  const hamburger = document.getElementById("hamburgerIcon");
+  const navMenu = document.getElementById("navLinks");
+  
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    document.body.classList.toggle("no-scroll"); // Prevent background scrolling
+  });
+  
+  // Close menu when clicking on links
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    });
+  });
+});
+    
+    
+   
+  

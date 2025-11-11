@@ -95,12 +95,14 @@ header{
     margin-bottom: 10px;
     height: auto;
 }
+
+/* forms */
 .form-containers{
     display: grid;
     column-gap: 150px;
     grid-template-columns: 25% 30% ;
     padding: 0px;
-    /* will activate them later  */
+ margin-left: 10px;
   display: inline;
 }
 .form-containers > div{
@@ -108,43 +110,23 @@ header{
 }
 
 form{
-    border: 20px;
-    padding: auto;
-    /* display: flex; */
+   display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-     box-shadow: 4px 4px 8px;
-     padding: 20px;
-     margin-bottom: 12px;
-     border-radius: 12px;
-     margin-top: 10px;
-   
-    
-
-}
-.form-containers{
- margin-left: 10px;
-}
-
-input{
-
-    height: 28px;
-    padding: 2px;
-    border: 2px solid ;
-    text-align: center;
-    width:100%;
-    margin: 5x;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
 
 }
 
-/* styling the forms */
-input[type = submit ]{
- cursor: pointer;
- margin: 5px;
- text-align: center;
- width: 30%;
- border-radius: 25px;
- 
+
+input { width: 100%; padding: 5px; margin: 5px 0; height: 28px; text-align: center; border: 2px solid; }
+
+input[type="submit"], input[type="reset"] {
+    width: 30%;
+    border-radius: 25px;
+    cursor: pointer;
 }
 .container{
     display: grid;
@@ -165,19 +147,6 @@ img{
     max-width: 100%;
     height: auto;
 }
-
-
-
-/* icon hamburger menu this css will be made functional with the use of Javascript*/
-
-/* .checkbtn{
-    font-size: 30px;
-    cursor: pointer;
-    display: block;
-    width: 20px;
-    height: 25px;
-    color: black;
-} */
 
 
 .container-footer{
@@ -364,10 +333,12 @@ text-align: center;
 
 }
 
-.articles, .article-three, .article-five,.article-four{
+.card, .articles, .article-three, .article-four, .article-five {
     border-radius: 10px;
-    border: #f1750f solid 3px;
-    box-shadow: 4px 4px 4px 4px rgba(255, 168, 6, 0.63);
+    border: 3px solid #f1750f;
+    box-shadow: 4px 4px 4px rgba(255,168,6,0.63);
+    text-align: center;
+    padding: 10px;
 }
 .articles, .article-three, .article-four h2{
     color:white;
@@ -534,31 +505,15 @@ input[type = text ]{
  
  
     }
-   /* .mainNavContainer{
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 200px;
-    font-size: 1rem;
-    line-height: 1rem;
 
-} */
-
-/* #mobi-menu:checked ~.mainNavContainer{
-    display: flex;
-} */
-/* .mobi-menuIcon{
-  display: block;
-} */
 img{
     max-width: 100%;
     height: auto;
     
 }
-
+.hamburgerIcon{
+  display: none; /* hidden on desktop */
+}
 
 /* for small screens and mobile phones */
 @media(max-width:768px){
@@ -576,32 +531,69 @@ img{
     height: auto;
  }
 
- /* the aim is to achieve stacked navigation menu items to fit small screen */
+ .hamburger div{
+    width: 25px;
+    height: 3px;
+    margin: 5px ;
+    background-color: #f1750f;
+    transition:0.3s ;
+    margin-right: 50px;  
+ }
+
  .mainNavContainer{
   display: none;
   position: absolute;
-  top: 70px;
+  top: 60px;
   left: 0;
   width: 100%;
   flex-direction: column;
   text-align: center;
+  background-color: rgba(255, 168, 6, 0.95);
+  padding: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
 
  }
 
   .mainNavContainer a {
-    color: white; 
-    margin: 1px;
-    background-color: rgba(255, 168, 6, 0.63);
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 5px;
-    font-size: 14px;
-    text-decoration: none;
-    text-align: center;
-    width: 100px;
-    height: auto;
-    position: relative;
+   padding: 10px 0;
+   margin: 0;
+   width: 100%;
 }
+/* hamburger menu for mobile  */
+#hamburgerIcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    cursor: pointer;
+    margin-right: 20px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 1001;
+  }
+  
+  #hamburgerIcon span {
+    width: 25px;
+    height: 3px;
+    background-color: #f1750f;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #hamburgerIcon.active span:nth-child(1) {
+ transform: rotate(45deg) translateY(8px);
+ }
+ #hamburgerIcon.active span:nth-child(2) {
+ opacity: 0;
+ }
+ #hambuttergerIcon.active span:nth-child(3) {
+ transform: rotate(-45deg) translateY(-8px);
+ }
+}
+
 
 
  .footer{
@@ -615,6 +607,7 @@ img{
     box-shadow: 4px 4px 8px rgba(255, 168, 6, 0.63);
     max-width: 100%;
     height: auto;
+    width: 100%;
     margin-top: 20px;
  }
  .minigallery{
@@ -668,23 +661,10 @@ flex-direction: column;
 .Ourhistory, .aboutUsPurpose, .whoArewePurpose, .values{
     padding: 5px;
 }
-/* hamburger menu css */
-.checkbtn{
-    font-size: 30px;
-    cursor: pointer;
-    display: block;
-    width: 20px;
-    height: 25px;
-    color: black;
 
-}
-#mobi-menu:checked ~ .mainNavContainer{
-    display: flex;
-}
 
-.mobi-menuIcon{
-  display: block;
-}
+
+
      
 }
 
@@ -708,14 +688,7 @@ flex-direction: column;
     display: none;
 }
 
-/* slider images */
 
-/* .slides{
-    display: flex;
-    gap: 5px;
-    transition: transform 0.6s ease-in-out;
-
-} */
 #slides img{
     width: 500px;
     height: auto;
