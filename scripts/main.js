@@ -163,6 +163,7 @@ searchBtn.addEventListener('click', () =>{
   })
 })
 
+<<<<<<< HEAD
 
  
  // hamburger menu
@@ -176,3 +177,38 @@ searchBtn.addEventListener('click', () =>{
     
     
    
+=======
+//         serviceCards.forEach(card => {
+//           const text = card.textContent.toLowerCase();
+//           if (text.includes(searchValue)) {
+//             card.style.display = "block";
+//           } else {
+//             card.style.display = "none";
+//           }
+//         });
+//       });
+//     });
+document.addEventListener("DOMContentLoaded", function() {
+      const searchInput = document.getElementById("searchInput");
+      const serviceCards = document.querySelectorAll(".article-Container .card");
+      searchInput.addEventListener("keyup", function(e) {
+        const searchValue = e.target.value.toLowerCase(); 
+        serviceCards.forEach(card => {
+          const title = card.querySelector(".card-title").textContent.toLowerCase();
+          const description = card.querySelector(".card-description").textContent.toLowerCase();
+          if (title.includes(searchValue) || description.includes(searchValue)) {
+            card.style.display = "block";   
+          } else {
+            card.style.display = "none";    
+          } 
+        });
+      } );
+    } );
+    // hamburger menu
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".mainNavContainer");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      
+    });
+>>>>>>> ca1c177b66dd7d62060d92d4a8564b554b50bb96
