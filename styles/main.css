@@ -637,9 +637,10 @@ img{
         line-height: 1.4rem;
         padding: 0 5px;
     }
-    #logo{
+#logo{
         max-width: 100%;
         height: auto;
+      
     }
  img{
     width: 100%;
@@ -647,16 +648,55 @@ img{
  }
 
  /* the aim is to achieve stacked navigation menu items to fit small screen */
- .mainNavContainer{
-  display: none;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  flex-direction: column;
-  text-align: center;
 
- }
+  header{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    border:  solid #f9c65a;
+  }
+  .header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: flex; /* show button */
+    flex-direction: column;
+    gap: 3px;
+    justify-content: space-between;
+    width: 30px;
+    
+
+  }
+  .bar{
+    display: block;
+    background-color:#f1750f;
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+
+  }
+  
+  .navbar {
+    width: 100%;
+  }
+
+  .mainNavContainer {
+    display: none; /* hidden until toggled */
+    flex-direction: column;
+    position: fixed;
+    top: 14%;
+    padding: 10px 0;
+    right: 0;
+   
+  }
+
+  /* When active (menu open) */
+  .mainNavContainer.active {
+    display: flex;
+  }
 
   .mainNavContainer a {
     color: white; 
@@ -672,6 +712,33 @@ img{
     height: auto;
     position: relative;
 }
+
+/* //reponsives */
+input, textarea, select{
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    height: auto;
+    border: 2px solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+input[type = submit ],input[type = reset ]{
+ margin: 5px;
+ text-align: center;
+ width: 100%;
+
+    }
+
+.enquiry-form-containers{
+ width: 100%;
+}
+.management-team img{
+ width: 100%;
+}
+
+
 
 
  .footer{
@@ -738,24 +805,20 @@ flex-direction: column;
     padding: 5px;
 }
 /* hamburger menu css */
-.checkbtn{
-    font-size: 30px;
-    cursor: pointer;
-    display: block;
-    width: 20px;
-    height: 25px;
-    color: black;
 
-}
-#mobi-menu:checked ~ .mainNavContainer{
-    display: flex;
-}
 
-.mobi-menuIcon{
-  display: block;
-}
      
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

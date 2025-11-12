@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Smooth Bounce Animation</title>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -22,34 +24,30 @@
 <body>
 
 <div id="scoresheet">Smooth Bouncing Text</div>
+   <section class="hero-section">
+      <div class="h1headers">
+        <h1>Blouberg Tournament</h1>
+        <button id="testbtn">test</button>
+      </div>
+        <p>Blouberg Tournament is more than just a football competition; it's a community-driven initiative aimed at making a positive impact. 
+        Here are some of the key benefits of our tournament</p>
+      
+      <h2>The Benefits of the Initiative</h2>
+      <article class="article-one">
+        <ul>
+          <li>Keep the community informed with tournament updates, results, and highlights.</li>
+          <li>Blouberg Annual Tournament – more than a game, it’s a movement.</li>
+          <li>Offer sponsorship opportunities for local businesses to support a meaningful cause.</li>
+        </ul>
+      </article>
+    </section>
 
 <script>
-$(document).ready(function(){
-  function moveRight() {
-    $("#scoresheet").animate(
-      { left: "1000" },
-      {
-        duration: 3000,
-        easing: "swing", // slows near the end
-        complete: moveLeft
-      }
-    );
-  }
-
-  function moveLeft() {
-    $("#scoresheet").animate(
-      { left: "0px" },
-      {
-        duration: 3000,
-        easing: "swing",
-        complete: moveRight
-      }
-    );
-  }
-
-  // Start automatically
-  moveRight();
-});
+ $(document).ready(function(){
+  $("#testBtn").click(function (){
+    $(".article-one").toggle()
+  })
+ })
 </script>
 
 </body>

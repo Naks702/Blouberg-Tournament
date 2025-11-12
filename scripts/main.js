@@ -38,33 +38,34 @@ function formValidation() {
    SLIDER (HOMEPAGE)
 ================================== */
 
-let gallery = document.querySelector('.gallery-container');
-gallery = document.querySelector('.gallery');
-slides = document.querySelectorAll('.slide');
-let index = 0;
-function showSlide(i) {
-  index += i; 
-  if (index < 0) {
-    index = slides.length - 1;
-  } 
-  else if (index >= slides.length) {
-    index = 0;
-  }
-  gallery.style.transform = `translateX(${-index * 100}%)`;
-}
+// const gallery_container = document.querySelector('.gallery-container');
+// const gallery = document.querySelector('.gallery');
+// constslides = document.querySelectorAll('.slide');
+// let index = 0;
+// function showSlide(i) {
+//   index += i; 
+//   if (index < 0) {
+//     index = slides.length - 1;
+//   } 
+//   else if (index >= slides.length) {
+//     index = 0;
+//   }
+//   gallery.style.transform = `translateX(${-index * 100}%)`;
+ 
+// }
 
-setInterval(() => {
-  showSlide(1);
-}, 5000);
-// slide controls
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-prevBtn.addEventListener('click', () => {
-  showSlide(-1);
-});
-nextBtn.addEventListener('click', () => {
-  showSlide(1);
-}); 
+// setInterval(() => {
+//   showSlide(1);
+// }, 5000);
+// // slide controls
+// const prevBtn = document.querySelector('.prev');
+// const nextBtn = document.querySelector('.next');
+// prevBtn.addEventListener('click', () => {
+//   showSlide(-1);
+// });
+// nextBtn.addEventListener('click', () => {
+//   showSlide(1);
+// }); 
 
 
 //slide dots
@@ -78,9 +79,6 @@ dots.forEach((dot, idx) => {
 /* ===============================
    END OF SLIDER
 ================================== */
-
-
-
 
 $(document).ready(function(){
   var $scoresheet = $("#scoresheet");
@@ -132,50 +130,38 @@ $(window).on("resize", function (){
 
 //Script for our search functionality
 
-const cards = document.querySelectorAll(".card")
-const searchBtn = document.getElementById("searchBtn")
-const searchInput = document.getElementById("searchInput")
-searchBtn.addEventListener('click', () =>{
-  const query =searchInput.value.toLowerCase().trim();
-  cards.forEach(card =>{
-    const title = card.querySelector(".card-title").textContent.toLowerCase();
-    const description = card.querySelector(".card-description").textContent.toLowerCase();
+// const cards = document.querySelectorAll(".card")
+// const searchBtn = document.getElementById("searchBtn")
+// const searchInput = document.getElementById("searchInput")
+// searchBtn.addEventListener('input', () =>{
+//   const query =searchInput.value.toLowerCase().trim();
+//   cards.forEach(card =>{
+//     const title = card.querySelector(".card-title").textContent.toLowerCase();
+//     const description = card.querySelector(".card-description").textContent.toLowerCase();
+//     card.style.display = (title.includes(query) || description.includes(query)) ? "flex" : "none";
+//   if(query === ""){
+//     card.style.display ="flex";
+//     return;
+//   }
 
-    if(title.includes(query) || description.includes(query))
-      card.style.display = "flex";
-    else{
-      card.style.display = "none";
-    }
-
-  })
-})
+//   })
+// })
 
 
  
- // hamburger menu
-    const hamburger = document.querySelector(".hamburgerIcon");
-    const navLinks = document.getElementById("navLinks");
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      hamburger.classList.toggle("active");
-      
-    });
-    
-    // Close menu when a link is clicked (for better UX on mobile)
-    const navLinkItems = document.querySelectorAll(".nav-link");
-    navLinkItems.forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        hamburger.classList.remove("active");
-      });
-    });
-    // end of hamburger menu
+ $(document).ready(function(){
+  $(".bar").click(function (){
+    $(".mainNavContainer").toggle()
+  })
+ })
+   
 
     //enquiry form validation
     function validateEnquiryForm() {
       let isValid = true;
       let name = document.getElementById("name").value.trim();
       let phone = document.getElementById("phone").value.trim();
+      let regex = "^[+]{1}(?:[0-9\-\(\)\/\.]\s?){6, 15}[0-9]{1}$";
       let enquiryType = document.getElementById("enquiry-type").value;
       let donate = document.getElementById("donate").value;
       let donationAmount = document.getElementById("donation-amount").value.trim();
@@ -189,9 +175,11 @@ searchBtn.addEventListener('click', () =>{
       if (name === "") {
         document.getElementById("validateName").innerHTML = "Enter your name";
         isValid = false;
-      } else if (phone === "" || phone.length !== 10 || isNaN(phone)) {
+      } else if (phone === "" || phone.length !== 10 || isNaN(phone) ) {
         document.getElementById("validatePhone").innerHTML = "Enter valid phone number";
         isValid = false;
+      }else if(regex.test(phone)){
+        console.log("its match")
       } else if (enquiryType === "") {  
         document.getElementById("validateEnquiryType").innerHTML = "Select an enquiry type";
         isValid = false;
