@@ -7,6 +7,7 @@
   <link rel="icon" type="image/x-icon" href="./images/icons/favicon-96x96.png" />
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+   
   <link rel="stylesheet" href="./styles/main.css" />
   <!-- seo -->
   <meta name="description" content="Welcome to Blouberg Tournament, where football meets community spirit. Join us for thrilling matches, community support, and unforgettable experiences." />
@@ -22,16 +23,19 @@
   </div>
 
   <!-- Hamburger Button -->
-  <button class="hamburger" id="hamburgerIcon" aria-label="Toggle Menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+<div class="hamburger">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+  
+</div>
+  
 
   <!-- Navigation -->
   <nav class="navbar">
     <div class="mainNavContainer" id="navLinks">
-      <a href="Index.html" class="nav-link active">Home</a>
+      <a href="Index.html" class="nav-link">Home</a>
       <a href="AboutUs.html" class="nav-link">About Us</a>
       <a href="Services.html" class="nav-link">Services</a>
       <a href="enquiry.html" class="nav-link">Enquiry</a>
@@ -44,30 +48,18 @@
   <!-- ===== MAIN CONTENT ===== -->
   <main>
     <div class="gallery-container">
-      <div class="slides fade">
-         <div class="slideCaption">picture 1</div>
-         <img src="./images/website gallery/pexels-thato-moiketsi-909645793-32422417.jpg">
+      <div class="sliderWrapper">
+        <div class="slider">
+           <img src="./images/website gallery/pexels-thato-moiketsi-909645793-32422417.jpg">
+           <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-30782367.jpg">
+            <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-31105911.jpg">
+        </div>
       </div>
-      <div class="slides fade">
-       <div class="slideCaption">picture 2</div>
-         <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-30782367.jpg">
-      </div>
-      <div class="slides fade">
-         <div class="slideCaption">picture 2</div>
-         <img src="./images/website gallery/pexels-chris-wade-ntezicimpa-564856410-31105911.jpg">
-      </div>
-      <div class="slides">
-
-      </div>
-
-        <a class="prev" id ="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" id ="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br />
-    <div style="text-align: center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
+        <div class="slideNav">
+          <a href="#"></a>
+          <a href="#"></a>
+          <a href="#"></a>
+        </div>
     </div>
 
     </div>
@@ -87,6 +79,7 @@
     <section class="hero-section">
       <div class="h1headers">
         <h1>Blouberg Tournament</h1>
+        
       </div>
         <p>Blouberg Tournament is more than just a football competition; it's a community-driven initiative aimed at making a positive impact. 
         Here are some of the key benefits of our tournament</p>
@@ -124,20 +117,7 @@
         </a>
       </article>
 
-      <article class="article-five">
-        <div class=" sponsors_logo_Container">
-          <h2> our sponsors</h2>
-          <!-- mini gallery showing sponsors logos -->
-
-          <img src="./images/icons/sponsor.png" class="minigallery" alt="Sponsor Icon" />
-          <img src="./images/icons/sponsor2.png" class="minigallery" alt="Sponsor Icon" />
-          <img src="./images/icons/sponsor3.png" class="minigallery" alt="Sponsor Icon" />
-          
-     
-        </div>
-        
-         
-      </article>
+   
     </section>
   </main>
 
