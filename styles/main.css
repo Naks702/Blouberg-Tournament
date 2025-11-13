@@ -129,6 +129,17 @@ form{
     box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
 
 }
+
+
+
+#map{
+ display: flex;
+ height: 400px;
+ width: 100%;
+ border-radius: 12px;
+ box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+ 
+}
 /* enquiry page styling */
 /* enquiry form inputs styling */
 input, textarea, select{
@@ -141,6 +152,10 @@ input, textarea, select{
     box-sizing: border-box;
     resize: vertical;
 }
+
+
+
+
 .general-info{
     padding: 10px;
     margin: 10px 0;
@@ -177,11 +192,13 @@ input {
     margin: 5%;
 
 }
+
+
 .management-team >div{
     border: #f1750f solid 1px;
 }
 
-/* end * services page styling */ */
+/* end * services page styling */ 
 .container{
     display: grid;
     column-gap: 100px;
@@ -297,27 +314,26 @@ main{
 } */
 /* contact us style */
 
-.map{
+.contactUs-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     border: #f1750f solid 2px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  
     align-items: center;
+    gap: 20px;
     margin: 20px 0 10px;
-    padding: 10px;
-    
-    
+    padding: 10px; 
 }
-.map>div,
+
+
+/* .map>div,
 .map iframe{
  flex: 1 1 300px;
  max-width: 400px;
  min-width: 250px;
  width: 100%;
  
-}
-.contact-info{
+} */
+/* .contact-info{
  font-size: 1rem;
 border-radius: 10px;
 padding: 10px;
@@ -325,8 +341,7 @@ margin-top: 10px;
 height: 380px;
 box-shadow: 4px 4px 8px;
 
-
-}
+} */
 .socialMediaContainer{
  justify-content: center; 
  display: flex;
