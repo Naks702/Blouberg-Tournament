@@ -219,18 +219,4 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-$(document).ready(function() {
-  $(".collapsible").click(function() {
-    const content = $(this).next(".content");
-    
-    // Close other open sections
-    $(".content").not(content).slideUp();
-    
-    // Toggle the one clicked
-    content.slideToggle();
-    
-    // Optional active highlight
-    $(".collapsible").not(this).removeClass("active");
-    $(this).toggleClass("active");
-  });
-});
+
