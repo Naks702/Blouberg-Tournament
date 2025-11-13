@@ -215,14 +215,14 @@ $(document).ready(function() {
     $(".content").not(content).slideUp();
     
     // Toggle the one clicked
-    content.slideToggle();
+    // content.slideToggle();
     
     // Optional active highlight
     $(".collapsible").not(this).removeClass("active");
     $(this).toggleClass("active");
   });
 });
-//leafletmap
+
 
 
 

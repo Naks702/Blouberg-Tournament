@@ -10,7 +10,11 @@ body, html {
     flex-direction: column;
     height: 100%;
     overflow-x: hidden;
+    
    
+}
+ul >li{
+ list-style: square;
 }
 span{
     
@@ -97,16 +101,13 @@ header{
 }
 
 /* contact us forms */
-.form-containers{
-    display: grid;
-    column-gap: 150px;
-    grid-template-columns: 25% 30% ;
-    padding: 0px;
- margin-left: 10px;
-  display: inline;
-}
-.form-containers > div{
-    border: 1px red;
+/*  */
+
+
+.contactDetail{
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.2);
+    padding: 1.5rem;
+    border-radius: 10px;
 }
 
 form{
@@ -274,6 +275,17 @@ img{
 .active, .collapsible:hover {
   background-color: #f1750f;
 }
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
 
 .content {
   display: none;
@@ -292,9 +304,9 @@ img{
 }
 
 .containerServices{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
 }
 
 .logosDiv{
@@ -498,14 +510,14 @@ height: auto;
 
 
 
-.card, .articles, .article-three, .article-four, .article-five {
+.card, .articles, .article-three, .article-four{
     border-radius: 10px;
     border: 3px solid #f1750f;
-    box-shadow: 4px 4px 4px rgba(255,168,6,0.63);
+    box-shadow: 4px 4px 4px 4px rgba(255,168,6,0.63);
     text-align: center;
     padding: 10px;
 }
-.articles, .article-three, .article-four h2{
+.articles, .article-three, .article-four,h2{
     color:white;
     text-align: center;
     margin-top: 10px;
@@ -948,15 +960,7 @@ right: 10px;
 #prev:hover{
  background-color: #f1750f;
 }
-.sponsors_logo_Container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 10px;
-    flex-wrap: wrap;
 
-}
 .slideCaption{
     top: 0;
     color: #f2f2f2;

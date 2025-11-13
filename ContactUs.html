@@ -47,30 +47,26 @@
                 <h1 id="h1headers">Contact Us</h1>
             </div>
              <section class="contactUs-container">
-                
-                 <!-- map will be added later in the part in 3 -->
-                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.293196463538!2d28.198682674630533!3d-26.28459356725138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e951b3f1b1e3819%3A0x6e8d6cb720b338c!2sSugar&#39;s%20Computer%20Repair%20Shop!5e0!3m2!1sen!2sza!4v1756302567532!5m2!1sen!2sza"
-                 width="397" height="377" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-                 <div id="map">
-                    
-                 </div>
-              <form class="contactForm"> 
-                <p><strong>Contact us for more information.</strong></p>
-                  <label for="firstName">Name</label> 
-                    <input type="text" id="firstName">
-                    <span id ="validateFirstName"></span>
 
-                   <label for="Cell Number">Cell Number</label>
-                    <input type="tel" id="cellphone">
+                 <div id="map"></div>
+              <form class="contactForm"> 
+                <div><p><strong>Contact us for more information.</strong></p></div>
+                <br><br>
+        
+                  <label for="firstName" id="formlabel"></label> 
+                    <input type="text" id="firstName" placeholder="First Name">
+                    <span id ="validateFirstName"></span>
+                   <label for="Cell Number"></label>
+                    <input type="tel" id="cellphone" placeholder="Cell Phone">
                     <span id ="validateCellphone"></span>
-                      <label for="Email">Email </label>
-                    <input type="Email" id="email">
+                      <label for="Email"></label>
+                    <input type="Email" id="email" placeholder="Email">
                     <span id ="validateEmail"></span>
                   
                   <input type="submit" id="contactBtn" >
-                   <p>If you wish to to enquire or join our tournament click <a href="./enquiry.html" id="innerClicks">Here</a></p>
+                   <p>If you wish to enquire or join our tournament click <a href="./enquiry.html" id="innerClicks">Here</a></p>
               </form>
-                  <div>
+                  <div class="contactDetail">
                     <h2>Our contact details</h2>
                     <p>We are happy to welcome you in our office. see address details below</p>
                       <h3>Our Address</h3>
@@ -110,6 +106,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 }).addTo(map);
 map.setView([-26.2846, 28.1986], 16);
+L.marker([-26.2846, 28.1986])
+        .addTo(map)
+        .bindPopup('<b>Blouberg Tournament Office</b><br>Niemaan Rd, Klippoortjie')
+        .openPopup();
 
 </script>
 
