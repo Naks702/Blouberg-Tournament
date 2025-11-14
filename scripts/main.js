@@ -1,229 +1,171 @@
-function formValidation() {
-  let isValid = true;
-  let firstname = document.getElementById("firstName").value.trim();
-  let lastName = document.getElementById("lastName").value.trim();
-  let cellphone = document.getElementById("cellphone").value.trim();
-  let email = document.getElementById("email").value.trim();
+//search functionality on service page
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("searchInput");
+  const searchBtn = document.getElementById("searchBtn");
+  const cards = document.querySelectorAll(".card");
 
-  document.getElementById("validateFirstName").innerHTML = "";
-  document.getElementById("validateLastName").innerHTML = "";
-  document.getElementById("validateCellphone").innerHTML = "";
-  document.getElementById("validateEmail").innerHTML = "";
+  function searchServices() {
+    const query = searchInput.value.toLowerCase();
 
-  if (firstname === "") {
-    document.getElementById("validateFirstName").innerHTML = "Enter first name";
-    isValid = false;
-  } else if (lastName === "") {
-    document.getElementById("validateLastName").innerHTML = "Enter last name";
-    isValid = false;
-  } else if (cellphone === "" || cellphone.length !== 10 || isNaN(cellphone)) {
-    document.getElementById("validateCellphone").innerHTML = "Enter valid cellphone";
-    isValid = false;
-  } else if (
-    email === "" ||
-    !email.includes("@") ||
-    !email.includes(".com") ||
-    email.indexOf("@") === 0
-  ) {
-    document.getElementById("validateEmail").innerHTML = "Enter valid email";
-    isValid = false;
+    cards.forEach(card => {
+      const title = card.querySelector(".card-title").textContent.toLowerCase();
+      const desc = card.querySelector(".card-description").textContent.toLowerCase();
+
+      card.style.display =
+        title.includes(query) || desc.includes(query)
+          ? "block"
+          : "none";
+    });
   }
 
-  return isValid;
-}
+  if (searchInput) {
+    searchInput.addEventListener("input", searchServices);
+  }
+  if (searchBtn) {
+    searchBtn.addEventListener("click", searchServices);
+  }
 
+  /* ============================
+     LIGHTBOX GALLERY
+  =============================*/
+  const images = document.querySelectorAll(".gallery-container .slider img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".close-btn");
 
+  if (images) {
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+    });
+  }
 
-/* ===============================
-   SLIDER (HOMEPAGE)
-================================== */
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  }
 
-// const gallery_container = document.querySelector('.gallery-container');
-// const gallery = document.querySelector('.gallery');
-// constslides = document.querySelectorAll('.slide');
-// let index = 0;
-// function showSlide(i) {
-//   index += i; 
-//   if (index < 0) {
-//     index = slides.length - 1;
-//   } 
-//   else if (index >= slides.length) {
-//     index = 0;
-//   }
-//   gallery.style.transform = `translateX(${-index * 100}%)`;
- 
-// }
+  if (lightbox) {
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+      }
+    });
+  }
 
-// setInterval(() => {
-//   showSlide(1);
-// }, 5000);
-// // slide controls
-// const prevBtn = document.querySelector('.prev');
-// const nextBtn = document.querySelector('.next');
-// prevBtn.addEventListener('click', () => {
-//   showSlide(-1);
-// });
-// nextBtn.addEventListener('click', () => {
-//   showSlide(1);
-// }); 
+  /* enquiry form validation*/
+  window.validateEnquiryForm = function () {
+    let isValid = true;
+    let name = document.getElementById("name").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let enquiryType = document.getElementById("enquiry-type").value;
+    let donate = document.getElementById("donate").value;
+    let donationAmount = document.getElementById("donation-amount").value.trim();
 
+    document.getElementById("validateName").innerHTML = "";
+    document.getElementById("validatePhone").innerHTML = "";
+    document.getElementById("validateEnquiryType").innerHTML = "";
+    document.getElementById("validateDonate").innerHTML = "";
+    document.getElementById("validateDonationAmount").innerHTML = "";
 
-//slide dots
-const dots = document.querySelectorAll('.dot');
-dots.forEach((dot, idx) => {
-  dot.addEventListener('click', () => {
-    currentSlide(idx + 1);
-  });
+    if (name === "") {
+      document.getElementById("validateName").innerHTML = "Enter your name";
+      isValid = false;
+    } else if (phone === "" || phone.length !== 10 || isNaN(phone)) {
+      document.getElementById("validatePhone").innerHTML = "Enter valid phone number";
+      isValid = false;
+    } else if (enquiryType === "") {
+      document.getElementById("validateEnquiryType").innerHTML = "Select an enquiry type";
+      isValid = false;
+    } else if (donate === "") {
+      document.getElementById("validateDonate").innerHTML = "Select donation preference";
+      isValid = false;
+    } else if (donate === "yes" && (donationAmount === "" || isNaN(donationAmount) || Number(donationAmount) <= 0)) {
+      document.getElementById("validateDonationAmount").innerHTML = "Enter valid donation amount";
+      isValid = false;
+    }
+
+    return isValid;
+  };
+
+  const map = L.map('map');
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom:19,
+  attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+
+}).addTo(map);
+map.setView([-26.2846, 28.1986], 16);
+L.marker([-26.2846, 28.1986])
+        .addTo(map)
+        .bindPopup('<b>Blouberg Tournament Office</b><br>Niemaan Rd, Klippoortjie')
+        .openPopup();
+
 });
 
-/* ===============================
-   END OF SLIDER
-================================== */
 
-$(document).ready(function(){
+
+
+// END DOMContentLoaded
+
+
+
+/* hamburger menu toggles*/
+$(document).ready(function () {
+  $(".bar").click(function () {
+    $(".mainNavContainer").toggle();
+  });
+
+  /* MOVING SCORESHEET BANNER
+  */
   var $scoresheet = $("#scoresheet");
-   
-  function move(){
-   
-    var containerWidth = $("#scoresheet").width()
+
+  function move() {
+    var containerWidth = $("#scoresheet").width();
     var elementWidth = $scoresheet.outerWidth();
 
-    $scoresheet.css({left: containerWidth, color:"green"})
-    $scoresheet.animate({left: -elementWidth},
-      {duration:25000,
+    $scoresheet.css({ left: containerWidth, color: "green" });
+    $scoresheet.animate(
+      { left: -elementWidth },
+      {
+        duration: 25000,
         easing: "linear",
         complete: move
       }
-
-    )
-    
+    );
   }
 
-  $scoresheet.hover(
-    function(){
-      $(this).stop(true);
-    },
-    
-    function(){
-      
-      move()
+  if ($scoresheet.length) {
+    $scoresheet.hover(
+      function () {
+        $(this).stop(true);
+      },
+      function () {
+        move();
+      }
+    );
 
-    }
-                    
-  //for animation mobile responsiveness
-);
-$(window).on("resize", function (){
-  if($scoresheet.is(":animated")){
-    $scoresheet.stop(true)
-  
+    $(window).on("resize", function () {
+      if ($scoresheet.is(":animated")) {
+        $scoresheet.stop(true);
+      }
+      move();
+    });
+
+    move();
   }
-  move()
-})
 
-  move();
-
-   
-})
-
-
-
-
-//Script for our search functionality
-
-// const cards = document.querySelectorAll(".card")
-// const searchBtn = document.getElementById("searchBtn")
-// const searchInput = document.getElementById("searchInput")
-// searchBtn.addEventListener('input', () =>{
-//   const query =searchInput.value.toLowerCase().trim();
-//   cards.forEach(card =>{
-//     const title = card.querySelector(".card-title").textContent.toLowerCase();
-//     const description = card.querySelector(".card-description").textContent.toLowerCase();
-//     card.style.display = (title.includes(query) || description.includes(query)) ? "flex" : "none";
-//   if(query === ""){
-//     card.style.display ="flex";
-//     return;
-//   }
-
-//   })
-// })
-
-
- 
- $(document).ready(function(){
-  $(".bar").click(function (){
-    $(".mainNavContainer").toggle()
-  })
- })
-   
-
-    //enquiry form validation
-    function validateEnquiryForm() {
-      let isValid = true;
-      let name = document.getElementById("name").value.trim();
-      let phone = document.getElementById("phone").value.trim();
-      let regex = "^[+]{1}(?:[0-9\-\(\)\/\.]\s?){6, 15}[0-9]{1}$";
-      let enquiryType = document.getElementById("enquiry-type").value;
-      let donate = document.getElementById("donate").value;
-      let donationAmount = document.getElementById("donation-amount").value.trim();
-
-      document.getElementById("validateName").innerHTML = "";
-      document.getElementById("validatePhone").innerHTML = "";
-      document.getElementById("validateEnquiryType").innerHTML = "";
-      document.getElementById("validateDonate").innerHTML = "";
-      document.getElementById("validateDonationAmount").innerHTML = "";
-
-      if (name === "") {
-        document.getElementById("validateName").innerHTML = "Enter your name";
-        isValid = false;
-      } else if (phone === "" || phone.length !== 10 || isNaN(phone) ) {
-        document.getElementById("validatePhone").innerHTML = "Enter valid phone number";
-        isValid = false;
-      }else if(regex.test(phone)){
-        console.log("its match")
-      } else if (enquiryType === "") {  
-        document.getElementById("validateEnquiryType").innerHTML = "Select an enquiry type";
-        isValid = false;
-      } else if (donate === "") {  
-        document.getElementById("validateDonate").innerHTML = "Select donation preference";
-        isValid = false;
-      } else if (donate === "yes" && (donationAmount === "" || isNaN(donationAmount) || Number(donationAmount) <= 0)) { 
-        document.getElementById("validateDonationAmount").innerHTML = "Enter valid donation amount";
-        isValid = false;
-      } 
-      return isValid;
-
-    }   
-var coll = document.getElementsByClassName("collapsible");
-var i;
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-
-$(document).ready(function() {
-  $(".collapsible").click(function() {
+  /*collapsible functionality on About us page*/
+  $(".collapsible").click(function () {
     const content = $(this).next(".content");
-    
-    // Close other open sections
+
     $(".content").not(content).slideUp();
-    
-    // Toggle the one clicked
-    // content.slideToggle();
-    
-    // Optional active highlight
+    content.slideToggle();
+
     $(".collapsible").not(this).removeClass("active");
     $(this).toggleClass("active");
   });
+
 });
-
-
-
-
-
