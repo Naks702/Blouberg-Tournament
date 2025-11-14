@@ -71,101 +71,58 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("validateDonate").innerHTML = "";
     document.getElementById("validateDonationAmount").innerHTML = "";
 
-    if (name === "") {
-      document.getElementById("validateName").innerHTML = "Enter your name";
-      isValid = false;
-    } else if (phone === "" || phone.length !== 10 || isNaN(phone)) {
-      document.getElementById("validatePhone").innerHTML = "Enter valid phone number";
-      isValid = false;
-    } else if (enquiryType === "") {
-      document.getElementById("validateEnquiryType").innerHTML = "Select an enquiry type";
-      isValid = false;
-    } else if (donate === "") {
-      document.getElementById("validateDonate").innerHTML = "Select donation preference";
-      isValid = false;
-    } else if (donate === "yes" && (donationAmount === "" || isNaN(donationAmount) || Number(donationAmount) <= 0)) {
-      document.getElementById("validateDonationAmount").innerHTML = "Enter valid donation amount";
-      isValid = false;
+      if (name === "") {
+        document.getElementById("validateName").innerHTML = "Enter your name";
+        isValid = false;
+      } else if (phone === "" || phone.length !== 10 || isNaN(phone) ) {
+        document.getElementById("validatePhone").innerHTML = "Enter valid phone number";
+        isValid = false;
+      }else if(regex.test(phone)){
+        console.log("its match")
+      } else if (enquiryType === "") {  
+        document.getElementById("validateEnquiryType").innerHTML = "Select an enquiry type";
+        isValid = false;
+      } else if (donate === "") {  
+        document.getElementById("validateDonate").innerHTML = "Select donation preference";
+        isValid = false;
+      } else if (donate === "yes" && (donationAmount === "" || isNaN(donationAmount) || Number(donationAmount) <= 0)) { 
+        document.getElementById("validateDonationAmount").innerHTML = "Enter valid donation amount";
+        isValid = false;
+      } 
+      return isValid;
+
+    }   
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
     }
-
-    return isValid;
-  };
-
-  const map = L.map('map');
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom:19,
-  attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-
-}).addTo(map);
-map.setView([-26.2846, 28.1986], 16);
-L.marker([-26.2846, 28.1986])
-        .addTo(map)
-        .bindPopup('<b>Blouberg Tournament Office</b><br>Niemaan Rd, Klippoortjie')
-        .openPopup();
-
-});
-
-
-
-
-// END DOMContentLoaded
-
-
-
-/* hamburger menu toggles*/
-$(document).ready(function () {
-  $(".bar").click(function () {
-    $(".mainNavContainer").toggle();
   });
+}
 
-  /* MOVING SCORESHEET BANNER
-  */
-  var $scoresheet = $("#scoresheet");
-
-  function move() {
-    var containerWidth = $("#scoresheet").width();
-    var elementWidth = $scoresheet.outerWidth();
-
-    $scoresheet.css({ left: containerWidth, color: "green" });
-    $scoresheet.animate(
-      { left: -elementWidth },
-      {
-        duration: 25000,
-        easing: "linear",
-        complete: move
-      }
-    );
-  }
-
-  if ($scoresheet.length) {
-    $scoresheet.hover(
-      function () {
-        $(this).stop(true);
-      },
-      function () {
-        move();
-      }
-    );
-
-    $(window).on("resize", function () {
-      if ($scoresheet.is(":animated")) {
-        $scoresheet.stop(true);
-      }
-      move();
-    });
-
-    move();
-  }
-
-  /*collapsible functionality on About us page*/
-  $(".collapsible").click(function () {
+$(document).ready(function() {
+  $(".collapsible").click(function() {
     const content = $(this).next(".content");
-
+    
+    // Close other open sections
     $(".content").not(content).slideUp();
-    content.slideToggle();
-
+    
+    // Toggle the one clicked
+    // content.slideToggle();
+    
+    // Optional active highlight
     $(".collapsible").not(this).removeClass("active");
     $(this).toggleClass("active");
   });
-
 });
+
+
+
+
+
