@@ -5,7 +5,7 @@ body, html {
     background-color:#f8c69a ;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 2rem;
-    padding-top: 60px;
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -275,10 +275,10 @@ img{
 .active, .collapsible:hover {
   background-color: #f1750f;
 }
-.collapsible:after {
+.collapsible::after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
-  color: white;
+  color: white ;
   float: right;
   margin-left: 5px;
 }
