@@ -47,7 +47,7 @@
     <div class="enquiry-form-containers">
        <h2>Enquiry Form</h2>
        <p>Feel free to send us any donation or any kind of contributions by filling the form below.</p>
-    <form class="enquiry-form" action="#" method="post" id="enquiry-form">
+    <form class="enquiry-form" action="#" method="post" id="enquiry-form" onsubmit="return validateEnquiryForm()">
       <label for="name">Your Name:</label><br />
       <span id="validateName"></span>
       <input type="name"><br />
@@ -56,7 +56,7 @@
       <span id="validatePhone"></span>
       <label for="phone">Your Phone Number:</label><br />
       <input type="tel" id="phone" name="phone" placeholder="Your Phone Number"><br />
-      <label for ="enquiry-type">Type of Enquiry:</label><br />
+      <label for ="enquiry-type" >Type of Enquiry:</label><br />
       <span id="validateEnquiryType"></span>
       <select id="enquiry-type" name="enquiry-type">
         <option value="sponsors">sponsorship Enquiry</option>
@@ -67,18 +67,19 @@
 
       <label for ="do you wish to donate?">Do you wish to donate?</label><br />
       <span id="validateDonate"></span>
-      <select id="donate" name="donate">
+      <select id="donate" name="donate" onchange="renderDonationAmountField()">
         <option value="yes">Yes</option>
         <option value="no">No</option>
         <option value="maybe later">Maybe Later</option>
       </select><br />
-      <p>if yes indicate the amount</p>
+      <div id="donation-amount-container">
+      <label for="donation-amount">Donation Amount:</label><br />
+
       <span id="validateDonationAmount"></span>
       <textarea id="donation-amount" name="donation-amount" rows="2" cols="30" placeholder="Enter Amount"></textarea><br />
+      </div>
       <label for="message">Message:</label><br />
       <textarea id="message" name="message" rows="4" cols="50"></textarea><br />
-
-
       <input type="submit" value="Submit" />
     </form>
     </div>

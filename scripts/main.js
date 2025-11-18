@@ -91,7 +91,22 @@ document.addEventListener("DOMContentLoaded", () => {
       } 
       return isValid;
 
-    }   
+    } 
+    
+    //contact form donation
+   
+  function toggleDonationAmount() {
+    const donateSelect = document.getElementById("donate");
+    const donationAmountDiv = document.getElementById("donation-amount-container");
+    if (donateSelect.value === "yes") {
+      donationAmountDiv.style.display = "block";
+    } else {
+      donationAmountDiv.style.display = "none";
+    } 
+  }
+
+
+//collapsible sections
 var coll = document.getElementsByClassName("collapsible");
 var i;
 for (i = 0; i < coll.length; i++) {
@@ -105,6 +120,55 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+});
+
+  function contactFormValidation(){
+   
+    const firstName  = document.forms["contactForm"]["firstName"].value;
+    const cellphone  = document.forms["contactForm"]["cellphone"].value;
+    const regex = /^[0-9]{10}$/;
+    const email  = document.forms["contactForm"]["email"].value;
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let formSubmitSucess = true;
+
+    document.getElementById("validateFirstName").innerHTML = "";
+    document.getElementById("validateCellphone").innerHTML = "";
+    document.getElementById("validateEmail").innerHTML = "";
+    if(firstName == ""){
+      document.getElementById("validateFirstName").innerHTML = "Please enter your first name";
+      formSubmitSucess = false;
+    }
+    if(cellphone == "" || isNaN(cellphone) || cellphone.length !=10){
+      document.getElementById("validateCellphone").innerHTML = "Please enter a valid cellphone number";
+      formSubmitSucess = false;
+    }
+    if(!regex.test(cellphone)){
+      document.getElementById("validateCellphone").innerHTML = "Please enter a valid cellphone number";
+      formSubmitSucess = false;
+    }
+    if(email == ""){
+      document.getElementById("validateEmail").innerHTML = "Please enter your email";
+      formSubmitSucess = false;
+    }
+    if(!regexEmail.test(email)){
+      document.getElementById("validateEmail").innerHTML = "Please enter a valid email";
+     formSubmitSucess = false;
+    }
+
+    if(!formSubmitSucess){
+    
+      formSubmitSucess = false;
+      
+    }
+    const form = document.getElementById('contactForm');
+    const messageBox = document.getElementById("formSubmit");
+    form.style.display = "none"
+    messageBox.style.display = "block";
+    messageBox.innerHTML = "Form was submitted successfully and we will be in touch.";
+    return false
+  }
+
+
 
 $(document).ready(function() {
   $(".collapsible").click(function() {
