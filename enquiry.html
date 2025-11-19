@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Enquiry | Blouberg Tournament</title>
   <link rel="icon" type="image/x-icon" href="./images/icons/favicon-96x96.png" />
+   
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
   <link rel="stylesheet" href="./styles/main.css" />
@@ -48,40 +49,64 @@
        <h2>Enquiry Form</h2>
        <p>Feel free to send us any donation or any kind of contributions by filling the form below.</p>
     <form class="enquiry-form" action="#" method="post" id="enquiry-form" onsubmit="return validateEnquiryForm()">
-      <label for="name">Your Name:</label><br />
-      <span id="validateName"></span>
-      <input type="name"><br />
-      <label for="email">Your Email:</label><br />
-      <input type="email"><br />
-      <span id="validatePhone"></span>
-      <label for="phone">Your Phone Number:</label><br />
-      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number"><br />
-      <label for ="enquiry-type" >Type of Enquiry:</label><br />
-      <span id="validateEnquiryType"></span>
-      <select id="enquiry-type" name="enquiry-type">
-        <option value="sponsors">sponsorship Enquiry</option>
-        <option value="service">Service Related</option>
-        <option value="tournament">Tournament Related</option>
-        <option value="other">Other</option>
-      </select><br />
+      <label for="name"></label><br />
+      <input type="name" id="name" placeholder="Your Name"><br />
+       <span id="validateName"></span>
 
-      <label for ="do you wish to donate?">Do you wish to donate?</label><br />
-      <span id="validateDonate"></span>
-      <select id="donate" name="donate" onchange="renderDonationAmountField()">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-        <option value="maybe later">Maybe Later</option>
-      </select><br />
-      <div id="donation-amount-container">
+      <label for="email"></label><br />
+      <input type="email" id ="email" placeholder="Your Email:"><br />
+      <span id="validateEmail"></span><br>
+
+      <label for="phone"></label><br />
+      <input type="tel" id="cellphone" name="phone" placeholder="Your Phone Number:"><br />
+      <span id="validatePhone"></span>
+     <div class="row-flex">
+
+    <!-- LEFT SIDE: Type of Enquiry -->
+    <div class="left-side">
+        <label for="enquiry-type">Type of Enquiry:</label>
+        <select id="enquiry-type" name="enquiry-type">
+            <option value="">Select Applicable Options</option>
+            <option value="sponsors">Sponsorship Enquiry</option>
+            <option value="service">Service Related</option>
+            <option value="tournament">Tournament Related</option>
+            <option value="other">Other</option>
+        </select>
+
+        <p id="validateEnquiryType"></p>
+        <p id="sponsorsList" style="display: none;">See list of our sponsors</p>
+    </div>
+
+    <!-- RIGHT SIDE: Donation Section -->
+    <div class="right-side">
+        <label for="donate">Do you wish to donate?</label>
+        <select id="donate" name="donate" onchange="renderDonationAmountField()">
+            <option value="">--Please choose an option--</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="maybe later">Maybe Later</option>
+        </select>
+
+        <p id="validateDonate"></p>
+    </div>
+
+</div>
+
+      <div id="donation-amount-container" style="display:none;">
       <label for="donation-amount">Donation Amount:</label><br />
 
       <span id="validateDonationAmount"></span>
       <textarea id="donation-amount" name="donation-amount" rows="2" cols="30" placeholder="Enter Amount"></textarea><br />
       </div>
+      <div>
       <label for="message">Message:</label><br />
       <textarea id="message" name="message" rows="4" cols="50"></textarea><br />
-      <input type="submit" value="Submit" />
+      </div>
+      <div class="btnClass">
+      <input type="submit" value="Submit" id="enquiryBtn"/>
+      </div>
     </form>
+    <div id="successMessage"></div>
     </div>
     </section>
     <section class="general-info" >
@@ -96,18 +121,20 @@
       <p><strong>Meet our management team</p></strong>
       <div class ="management-team">
         <div>
-          <p>Managin Director</p>
-          <img src="./images/website gallery/management/pexels-mustapha-damilola-458083529-30289347.jpg" alt="Managing Director" />
+          <h2>Managin Director</h2>
+          <img src="./images/website gallery/management/pexels-mustapha-damilola-458083529-30289347.jpg" alt="Managing Director Palesa Morudu" />
         </div>
         <div>
-          <p>Operations Manager</p>
-          <img src="./images/website gallery/management/pexels-ekaterina-bolovtsova-6077859.jpg" alt="Operations Manager" />
+          <h2>Operations Manager</h2>
+          <img src="./images/website gallery/management/pexels-ekaterina-bolovtsova-6077859.jpg" alt="Operations Manager Joe Shiburi" />
         </div>
       
       
       </div>
     </section>
   </main>
+
+
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
@@ -124,5 +151,10 @@
   </footer>
 
   <script src="./scripts/main.js"></script>
+  <div id="lightbox" class="lightbox">
+  <span class="close-btn">&times;</span>
+  <img id="lightbox-img" class="lightbox-img">
+</div>
+  
 </body>
 </html>

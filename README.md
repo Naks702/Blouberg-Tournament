@@ -39,7 +39,7 @@ b.	It will have social media link to share
 c.	Should be mobile friendly
 d.	Should be searchable on google and social media
 e.	Colours (#6aa84f) - green
-f.	)
+f.	
 g.	Typography: Sans Serif
 h.	Wireframes – We going to use Figma - https://www.figma.com/
 
@@ -82,6 +82,10 @@ We will then switch between the two menu depending on the device. We planning to
 
 Logo
 will be adjusted to be reponsive as per device
+
+//part 3
+fixed mobile optimised Menu as per Feedback from part 2
+
 <!-- 
 moble screenshot -->
 Mobile device optimisations - Tablet and Screenshot
@@ -116,9 +120,41 @@ Budget is vague or unrealistic.
  -Domain registration R100 per year
  total budget: 3900
 
- 
+ REFERENCE 
+ https://www.flaticon.com/free-icons/social-media
+ Reference
+w3schools.com, w. (2025, August 25). https://www.w3schools.com/html/default.asp. Accessed August 22, 2025, from https://www.w3schools.com/html/default.asp: https://www.w3schools.com/html/default.asp
+Wschool, W. (01, November 2025). https://www.w3schools.com/js/default.asp. Accessed November 2025, 2025, from https://www.w3schools.com/js/default.asp: https://www.w3schools.com/js/default.asp
+Wschool, W. (2025, September 15). https://www.w3schools.com/css/default.asp. Accessed Ocober 25, 2025, from https://www.w3schools.com/css/default.asp: https://www.w3schools.com/css/default.asp
+
+
+
+
+ CHANGELOG 
+ [4.2.0] - 2025 -11 - 05
+added enquiry page and enquiry form
+  [4.1.0] - 2025 -11 - 03
+Working on search functionality
+
+  [3.3.0] - 2025 -11 - 04
+Working on leaflet map
+  [3.2.0] - 2025 -11 - 03
+Working on updating and optimise all page for SEO
+
+ [3.2.0] - 2025 -11 - 03
+Working on search functionality
+
+
+
+ [3.1.0] - 2025 -11 - 01
+ Working hamburg Menu using Javacsript
+ [3.1.0] - 2025 -11 - 01
+working on the gallery and lightboxes
+
+
+
  [2.2.0] - 2025-10-07
-adding AJAX Forms"
+adding AJA Forms"
 
 
  [2.1.0] - 2025-10-06
@@ -130,7 +166,7 @@ Changed
 Reduced image sizes to improve performance and mobile SEO (site reduced from 35MB to 15MB).
 
 Used TinyPNG
- for compression.
+ for  image compression.
 
 Added
 

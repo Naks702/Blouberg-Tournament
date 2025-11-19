@@ -26,14 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ============================
-     LIGHTBOX GALLERY
+     LIGHTBOX functionaslity
   =============================*/
   const images = document.querySelectorAll(".gallery-container .slider img");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeBtn = document.querySelector(".close-btn");
 
-  if (images) {
+  if (images.length > 0 && lightbox && lightboxImg) {
     images.forEach(img => {
       img.addEventListener("click", () => {
         lightbox.style.display = "flex";
@@ -56,54 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* enquiry form validation*/
-  window.validateEnquiryForm = function () {
-    let isValid = true;
-    let name = document.getElementById("name").value.trim();
-    let phone = document.getElementById("phone").value.trim();
-    let enquiryType = document.getElementById("enquiry-type").value;
-    let donate = document.getElementById("donate").value;
-    let donationAmount = document.getElementById("donation-amount").value.trim();
 
-    document.getElementById("validateName").innerHTML = "";
-    document.getElementById("validatePhone").innerHTML = "";
-    document.getElementById("validateEnquiryType").innerHTML = "";
-    document.getElementById("validateDonate").innerHTML = "";
-    document.getElementById("validateDonationAmount").innerHTML = "";
-
-      if (name === "") {
-        document.getElementById("validateName").innerHTML = "Enter your name";
-        isValid = false;
-      } else if (phone === "" || phone.length !== 10 || isNaN(phone) ) {
-        document.getElementById("validatePhone").innerHTML = "Enter valid phone number";
-        isValid = false;
-      }else if(regex.test(phone)){
-        console.log("its match")
-      } else if (enquiryType === "") {  
-        document.getElementById("validateEnquiryType").innerHTML = "Select an enquiry type";
-        isValid = false;
-      } else if (donate === "") {  
-        document.getElementById("validateDonate").innerHTML = "Select donation preference";
-        isValid = false;
-      } else if (donate === "yes" && (donationAmount === "" || isNaN(donationAmount) || Number(donationAmount) <= 0)) { 
-        document.getElementById("validateDonationAmount").innerHTML = "Enter valid donation amount";
-        isValid = false;
-      } 
-      return isValid;
-
-    } 
-    
-    //contact form donation
-   
-  function toggleDonationAmount() {
-    const donateSelect = document.getElementById("donate");
-    const donationAmountDiv = document.getElementById("donation-amount-container");
-    if (donateSelect.value === "yes") {
-      donationAmountDiv.style.display = "block";
-    } else {
-      donationAmountDiv.style.display = "none";
-    } 
-  }
+ 
+  
 
 
 //collapsible sections
@@ -120,56 +75,167 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+
+  if (document.getElementById("map")) {
+    let map = L.map('map').setView([-26.2865, 28.2066], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([-26.2865, 28.2066])
+      .addTo(map)
+      .bindPopup('Our Location: Klippoortjie, Germiston')
+      .openPopup();
+  }
+
 });
 
-  function contactFormValidation(){
-   
-    const firstName  = document.forms["contactForm"]["firstName"].value;
-    const cellphone  = document.forms["contactForm"]["cellphone"].value;
-    const regex = /^[0-9]{10}$/;
-    const email  = document.forms["contactForm"]["email"].value;
-    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let formSubmitSucess = true;
+  function contactFormValidation() {
+    const firstName = document.getElementById("firstName").value.trim();
+    const cellphone = document.getElementById("cellphone").value.trim();
+    const email = document.getElementById("email").value.trim();
 
+    const regexNumber = /^[0-9]{10}$/;
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    let isValid = true;
+
+    // Clear previous errors
     document.getElementById("validateFirstName").innerHTML = "";
     document.getElementById("validateCellphone").innerHTML = "";
     document.getElementById("validateEmail").innerHTML = "";
-    if(firstName == ""){
-      document.getElementById("validateFirstName").innerHTML = "Please enter your first name";
-      formSubmitSucess = false;
+
+    // Validate fields
+    if (firstName === "") {
+        document.getElementById("validateFirstName").innerHTML = "Please enter your first name";
+        isValid = false;
     }
-    if(cellphone == "" || isNaN(cellphone) || cellphone.length !=10){
-      document.getElementById("validateCellphone").innerHTML = "Please enter a valid cellphone number";
-      formSubmitSucess = false;
+    if (!regexNumber.test(cellphone)) {
+        document.getElementById("validateCellphone").innerHTML = "Please enter a valid 10-digit number";
+        isValid = false;
     }
-    if(!regex.test(cellphone)){
-      document.getElementById("validateCellphone").innerHTML = "Please enter a valid cellphone number";
-      formSubmitSucess = false;
-    }
-    if(email == ""){
-      document.getElementById("validateEmail").innerHTML = "Please enter your email";
-      formSubmitSucess = false;
-    }
-    if(!regexEmail.test(email)){
-      document.getElementById("validateEmail").innerHTML = "Please enter a valid email";
-     formSubmitSucess = false;
+    if (!regexEmail.test(email)) {
+        document.getElementById("validateEmail").innerHTML = "Please enter a valid email";
+        isValid = false;
     }
 
-    if(!formSubmitSucess){
+    // Stop if invalid
+    if (!isValid) return false;
+
+    // SUCCESS → Replace form with message
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("formSubmit");
+
+    form.style.display = "none"; // hide the form
+    successMessage.style.display = "block";
+
+    let countdown = 5;
+
+    successMessage.innerHTML = `
+        <div style="padding:20px; background:#d4edda; color:#green; border-radius:8px;">
+            <h2>Thank you!</h2>
+            <p>Your form was submitted successfully. We will be in touch soon.</p>
+            <p>Redirecting in <span id="countdown">${countdown}</span> seconds...</p>
+        </div>
+    `;
+
+    // Countdown every second
+    const interval = setInterval(() => {
+        countdown--;
+        document.getElementById("countdown").textContent = countdown;
+
+        if (countdown <= 0) {
+            clearInterval(interval);
+            window.location.href = "ContactUs.html"; // ⭐ Change redirect page here
+        }
+    }, 1000);
+
+    return false; // prevent refresh
+}
+// Show donation amount when user selects YES
+function renderDonationAmountField() {
+    const donate = document.getElementById("donate").value;
+    const container = document.getElementById("donation-amount-container");
+
+    if (donate === "yes") {
+        container.style.display = "block";
+    } else {
+        container.style.display = "none";
+        document.getElementById("donation-amount").value = "";
+        document.getElementById("validateDonationAmount").innerHTML = "";
+    }
+}
+
+function validateEnquiryForm() {
+    let isValid = true;
+
+    // Input fields
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("cellphone").value.trim();
+    let enquiry = document.getElementById("enquiry-type").value;
+    let donate = document.getElementById("donate").value;
+    let donationAmount = document.getElementById("donation-amount").value.trim();
+
+    // Regex
+    const phoneRegex = /^[0-9]{10}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Clear errors
+    document.getElementById("validateName").innerHTML = "";
+    document.getElementById("validateEmail").innerHTML = "";
+    document.getElementById("validatePhone").innerHTML = "";
+    document.getElementById("validateEnquiryType").innerHTML = "";
+    document.getElementById("validateDonate").innerHTML = "";
+    document.getElementById("validateDonationAmount").innerHTML = "";
+
+    // Name
+    if (name === "") {
+        document.getElementById("validateName").innerHTML = "Enter your name";
+        isValid = false;
+    }
+
+    // Email
+    if (email === "" || !emailRegex.test(email)) {
+        document.getElementById("validateEmail").innerHTML = "Enter a valid email address";
+        isValid = false;
+    }
+
+    // Phone
+    if (!phoneRegex.test(phone)) {
+        document.getElementById("validatePhone").innerHTML = "Enter a valid 10-digit phone number";
+        isValid = false;
+    }
+
+    // Enquiry Type
+    if (enquiry === "") {
+        document.getElementById("validateEnquiryType").innerHTML = "Select an enquiry type";
+        isValid = false;
+    }
+
+    // Donation selection
+    if (donate === "") {
+        document.getElementById("validateDonate").innerHTML = "Select a donation preference";
+        isValid = false;
+    }
+
+    // Donation amount required IF donate = yes
+    if (donate === "yes") {
+        document.getElementById("donation-amount-container").style.display = "block";
+
+        if (donationAmount === "") {
+            document.getElementById("validateDonationAmount").innerHTML = "Enter the donation amount";
+            isValid = false;
+        }
+    }
+
+    return isValid;
+}
     
-      formSubmitSucess = false;
-      
-    }
-    const form = document.getElementById('contactForm');
-    const messageBox = document.getElementById("formSubmit");
-    form.style.display = "none"
-    messageBox.style.display = "block";
-    messageBox.innerHTML = "Form was submitted successfully and we will be in touch.";
-    return false
-  }
-
-
-
+   
+//collapsible sections with jQuery
 $(document).ready(function() {
   $(".collapsible").click(function() {
     const content = $(this).next(".content");
@@ -185,6 +251,55 @@ $(document).ready(function() {
     $(this).toggleClass("active");
   });
 });
+
+$(document).ready(function(){
+  var $scoresheet = $("#scoresheet");
+   
+  function move(){
+   
+    var containerWidth = $("#scoresheet").width()
+    var elementWidth = $scoresheet.outerWidth();
+
+    $scoresheet.css({left: containerWidth, color:"green"})
+    $scoresheet.animate({left: -elementWidth},
+      {duration:25000,
+        easing: "linear",
+        complete: move
+      }
+
+    )
+    
+  }
+
+  $scoresheet.hover(
+    function(){
+      $(this).stop(true);
+    },
+    
+    function(){
+      
+      move()
+
+    }
+                    
+  //for animation mobile responsiveness
+);
+$(window).on("resize", function (){
+  if($scoresheet.is(":animated")){
+    $scoresheet.stop(true)
+  
+  }
+  move()
+})
+
+  move();
+
+   
+})
+
+
+
+
 
 
 

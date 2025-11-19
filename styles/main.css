@@ -5,7 +5,7 @@ body, html {
     background-color:#f8c69a ;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 2rem;
-    padding-top: 50px;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -77,14 +77,16 @@ header{
     left:0;
     padding: 10px 20px;
     width: 100%;
-    z-index: 1000;
+    z-index: 9999;
+    height: 90px;
     box-shadow: 4px 4px 8px rgba(255, 168, 6, 0.63);
+  
 }
 .h1headers{
     background-color:#f8c69a ;
     display: flex;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 120px;
 }
 .services{
     margin-bottom: 30px;
@@ -180,20 +182,22 @@ input {
 .management-team{
     display: grid;
     gap: 20px;
-   
+    grid-template-columns: repeat(auto-fit, minMax(250px, 1fr));
     margin-top: 20px;
-    grid-template-columns: auto auto;
-    column-gap: 30px;
 }
 .management-team img{
-    width:auto;    
-    height: 400px; 
-    align-items: center;
-    justify-content: center;
-    margin: 5%;
+    width:100%;    
+    height: auto; 
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;;
 
 }
+.management-team p{
+  
 
+}
 
 .management-team >div{
     border: #f1750f solid 1px;
@@ -336,7 +340,9 @@ main{
     padding: 10px; 
 }
 
-
+span{
+    display: block;
+}
 /* .map>div,
 .map iframe{
  flex: 1 1 300px;
@@ -432,6 +438,7 @@ width: 100%;
 
 .fixtures{
     margin: 5px;
+    
 }
 .lightbox{
   display: none; 
@@ -472,7 +479,7 @@ text-align: center;
 
 }
 /* gallery styling */
-.gallery-container{
+/* .gallery-container{
   position: relative;
   margin: auto;
   padding: 2rem;
@@ -485,7 +492,7 @@ height: auto;
     justify-content: center;
     column-gap: 5px;
 
-}
+} */
 
 .slider{
     display: flex;
@@ -517,17 +524,16 @@ height: auto;
     border-radius: 50%;
     background-color: white;
     opacity: 0.75;
+    
 
 }
 .slideNav a:hover{
   
  opacity: 1;
 }
-.sliderWrapper{
- position: relative;
- max-width: 48rem;
- margin: 0 auto;
-
+.sliderWrapper,
+.gallery-container {
+    margin-top: 5px;   /* same value as header height */
 }
 
 .article-Container{
@@ -605,10 +611,9 @@ a {
 
 .tournamentInfo{
     display: grid;
-    grid-template-columns: repeat(4 , 1fr);
+    grid-template-columns: repeat( auto-fit, minMax(250px, 1fr));
     gap: 20px;
     justify-content: space-between;
-
     padding: 20px;
     max-width: 1200px;
 }
@@ -889,9 +894,9 @@ flex-direction: column;
 }
 
 .article-Container{
-    display: grid;
-    column-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+   display: grid;
+    grid-template-columns: repeat( auto-fit, minMax(250px, 1fr));
+   gap:20px
 }
 .services{
     padding: 15px;
@@ -1032,4 +1037,40 @@ right: 10px;
 }
 .tournaments,.column1{
     color: white;
+}
+/* styling the enquiry form */
+.row-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.left-side,
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-side label,
+.right-side label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+select {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#enquiryBtn{
+    border-radius: 25px;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+}
+.btnClass{
+display: block
 }
