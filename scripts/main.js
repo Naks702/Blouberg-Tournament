@@ -24,10 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (searchBtn) {
     searchBtn.addEventListener("click", searchServices);
   }
+  // Hamburger menu functionality
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".mainNavContainer");
 
-  /* ============================
-     LIGHTBOX functionaslity
-  =============================*/
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+  /* lightbox functionality*/
   const images = document.querySelectorAll(".gallery-container .slider img");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
