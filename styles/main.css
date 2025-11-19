@@ -125,6 +125,7 @@ form{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    
     padding: 10px;
     margin: 10px 0;
     border-radius: 12px;
@@ -132,7 +133,9 @@ form{
 
 }
 
-
+.enquiryh2,{
+    padding-top: 80px;
+}
 
 #map{
  display: flex;

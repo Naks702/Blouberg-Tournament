@@ -1,22 +1,18 @@
-Proposal content 
+PROJECT TITLE:
+ -a.Blouberg Annual Tournament Website
+STUDENT INFORMATION
+ -
+ -
+PROJECT OVERVIEW
 Our organisation is a non-profit communication organisation that is hosting monthly tournament
 The website is created with the aim of raising awareness amongst the youth on the community and also to attract sponsorships from various business interestedin giving back to the community for a good cause
 
-1	Organisation overview 
-a.	Organisation name: Blouberg Annual Tournament
 
-b.	History:
+
+History:
 a.	Our organisation started this year in Jan 2025 by successfully hosting a tournament then it was agreed by the community leaders that this tournament should be hosted on monthly basis and also  sponsors needs to be sought. 
 
-c.	Mission and Vision
-a.	To promote and support local talent 
-b.	To take kids out of  streets
-c.	entertainment
-d.	Target Audience
-a.	Community members
-b.	Local business people
-c.	Community clubs
-
+WEBSITE GOALS AND OBJECTIVES
 2	Website Goals and Objectives
 a.	Updates regarding the tournament
 b.	Brand awareness for sponsoring
@@ -24,7 +20,7 @@ c.	Brand awareness for community villages wishing to participate
 3	Current Website Analysis
 a.	We currently do not have website
 
-4	Website features and functionality
+4	KEY FEATURES AND FUNCTIONALITY
 a.	The website will have a form for companies that wish to participate in sponsoring 
 b.	The website will have a form for club that wish to participate in regular Tournament  
 c.	News section for any update regarding the tournament.
@@ -47,11 +43,7 @@ h.	Wireframes – We going to use Figma - https://www.figma.com/
 a.	Domain name: BloubergTournament
 b.	Technical requirement (JS, HTML and CSS)
 
-8 Sitemap
-
-<img width="664" height="317" alt="image" src="https://github.com/user-attachments/assets/881bb820-9e8b-4cc4-a70d-539dec287381" />
-
-7	Timeline and Milestone
+TIMELINES AND MILESTONES
 a.	Week 1:  Content layout, wireframe and domain registration
 b.	Week 2 - 3:  information plotting, wireframe and mockup submission 
 c.	Week 4: CSS  
@@ -59,33 +51,42 @@ d.	Week 4: JS (functionality)
 e.	Week 5: SEO fixes and content submission
 f.	Next month week 2: Go Live
 
-8	Budget 
+
+
+
+BUDGET
 a.	Costs: R 3000
 b.	Annual domain registration: R100
 c.	Monthly hosting fee  R99 Afrihost
 
+PART 1
+FIX BUDGET
+FIX PROPOSAL
+FIX TIMELINES AND MILESTONE
+FIX SITEMAP
 
+//PART 2
+FIXED EVERYTHING FROM PART 1
+Budget is vague or unrealistic. 
+- Website development cost R3000
+- Website maintainance cost R700 per month
+ - website hosting fee R100
+ -Domain registration R100 per year
+ total budget: 3900
 
-//part 2
+//FEED OF PART 2
+FIX NAVIGATION MENU AS IT WAS DISPEARING WHEN ON MOBILE
+FIX CHANGE LOG
 
-//Changes
-
-We change enquiry page from equiry to tournament page since we have multiple tournament to showcase, enquiry froms will be hosted underneath contact us page as 
-it contains relevant info and people go to the page to get contact details therefore can also send us quiries via this form
-
-//
-added social media from this side: https://www.flaticon.com/free-icons/social-media
-
-navigatioon Menu
-we have two set of menu, one set is for desktop >1024px while the other set is for smaller screen <1023
-We will then switch between the two menu depending on the device. We planning to use Javascript to use hamburger menu once we implemented Javascript
-
-Logo
-will be adjusted to be reponsive as per device
-
-//part 3
-fixed mobile optimised Menu as per Feedback from part 2
-
+PART 3
+FIXED EVERYTHING FROM PART 2
+ADDED SEO
+ADDED INTERACTIVE MAP
+ADDED ACCORDING ON ABOUT US
+ADDED ANIMATION ON HOMEPAGE
+ADDED VALIDATION ON TWO FORMS -CONTACT US AND ENQUIRY
+ADDED HAMBURGER MENU FOR MOBILE SCREENS 
+TEST SITE BROWSERS AND DEVICE
 <!-- 
 moble screenshot -->
 Mobile device optimisations - Tablet and Screenshot
@@ -98,34 +99,13 @@ Mobile device optimisations - Tablet and Screenshot
 laptop and bigger screen
 
 
-for easy refence i upload mobile optimisation in a folder \Blouberg-Tournament\images\mobileOptimisaScreenshot
+SITEMAP
+  http://www.bloubergtournament.co.za/sitemap.xml
 
-Based on the feedback or rubric the following item will be addressed
+<img width="664" height="317" alt="image" src="https://github.com/user-attachments/assets/881bb820-9e8b-4cc4-a70d-539dec287381" />
 
-Some vague comments added but does not explain fully 
--add comments on css for different page
--
--
--
 
-Content is missing or irrelevant. 
-- added a new page called tournament
-- add more content on service page 
-- add images
 
-Budget is vague or unrealistic. 
-- Website development cost R3000
-- Website maintainance cost R700 per month
- - website hosting fee R100
- -Domain registration R100 per year
- total budget: 3900
-
- REFERENCE 
- https://www.flaticon.com/free-icons/social-media
- Reference
-w3schools.com, w. (2025, August 25). https://www.w3schools.com/html/default.asp. Accessed August 22, 2025, from https://www.w3schools.com/html/default.asp: https://www.w3schools.com/html/default.asp
-Wschool, W. (01, November 2025). https://www.w3schools.com/js/default.asp. Accessed November 2025, 2025, from https://www.w3schools.com/js/default.asp: https://www.w3schools.com/js/default.asp
-Wschool, W. (2025, September 15). https://www.w3schools.com/css/default.asp. Accessed Ocober 25, 2025, from https://www.w3schools.com/css/default.asp: https://www.w3schools.com/css/default.asp
 
 
 
@@ -245,3 +225,10 @@ Tournament page created.
 [1.2.0]
 working on seo
 
+
+ REFERENCE 
+ https://www.flaticon.com/free-icons/social-media
+ Reference
+w3schools.com, w. (2025, August 25). https://www.w3schools.com/html/default.asp. Accessed August 22, 2025, from https://www.w3schools.com/html/default.asp: https://www.w3schools.com/html/default.asp
+Wschool, W. (01, November 2025). https://www.w3schools.com/js/default.asp. Accessed November 2025, 2025, from https://www.w3schools.com/js/default.asp: https://www.w3schools.com/js/default.asp
+Wschool, W. (2025, September 15). https://www.w3schools.com/css/default.asp. Accessed Ocober 25, 2025, from https://www.w3schools.com/css/default.asp: https://www.w3schools.com/css/default.asp

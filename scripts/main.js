@@ -1,4 +1,8 @@
 //search functionality on service page
+
+
+    
+
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
   const searchBtn = document.getElementById("searchBtn");
@@ -159,6 +163,7 @@ for (i = 0; i < coll.length; i++) {
 
     return false; // prevent refresh
 }
+
 // Show donation amount when user selects YES
 function renderDonationAmountField() {
     const donate = document.getElementById("donate").value;
@@ -174,69 +179,71 @@ function renderDonationAmountField() {
 }
 
 function validateEnquiryForm() {
-    let isValid = true;
+  let isValid = true;
 
-    // Input fields
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let phone = document.getElementById("cellphone").value.trim();
-    let enquiry = document.getElementById("enquiry-type").value;
-    let donate = document.getElementById("donate").value;
-    let donationAmount = document.getElementById("donation-amount").value.trim();
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let phone = document.getElementById("cellphone").value.trim();
+  let enquiry = document.getElementById("enquiry-type").value;
+  let donate = document.getElementById("donate").value;
+  let donationAmount = document.getElementById("donation-amount").value.trim();
 
-    // Regex
-    const phoneRegex = /^[0-9]{10}$/;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^[0-9]{10}$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Clear errors
-    document.getElementById("validateName").innerHTML = "";
-    document.getElementById("validateEmail").innerHTML = "";
-    document.getElementById("validatePhone").innerHTML = "";
-    document.getElementById("validateEnquiryType").innerHTML = "";
-    document.getElementById("validateDonate").innerHTML = "";
-    document.getElementById("validateDonationAmount").innerHTML = "";
+  document.getElementById("validateName").innerHTML = "";
+  document.getElementById("validateEmail").innerHTML = "";
+  document.getElementById("validatePhone").innerHTML = "";
+  document.getElementById("validateEnquiryType").innerHTML = "";
+  document.getElementById("validateDonate").innerHTML = "";
+  document.getElementById("validateDonationAmount").innerHTML = "";
 
-    // Name
-    if (name === "") {
-        document.getElementById("validateName").innerHTML = "Enter your name";
-        isValid = false;
+  if (name === "") {
+    document.getElementById("validateName").innerHTML = "Enter your name";
+    isValid = false;
+  }
+
+  if (email === "" || !emailRegex.test(email)) {
+    document.getElementById("validateEmail").innerHTML = "Enter a valid email address";
+    isValid = false;
+  }
+
+  if (!phoneRegex.test(phone)) {
+    document.getElementById("validatePhone").innerHTML = "Enter a valid 10-digit phone number";
+    isValid = false;
+  }
+
+  if (enquiry === "") {
+    document.getElementById("validateEnquiryType").innerHTML = "Select an enquiry type";
+    isValid = false;
+  }
+
+  if (donate === "") {
+    document.getElementById("validateDonate").innerHTML = "Select a donation preference";
+    isValid = false;
+  }
+
+  if (donate === "yes") {
+    document.getElementById("donation-amount-container").style.display = "block";
+
+    if (donationAmount === "") {
+      document.getElementById("validateDonationAmount").innerHTML = "Enter the donation amount";
+      isValid = false;
     }
+  }
 
-    // Email
-    if (email === "" || !emailRegex.test(email)) {
-        document.getElementById("validateEmail").innerHTML = "Enter a valid email address";
-        isValid = false;
-    }
+  if (!isValid) return false;
 
-    // Phone
-    if (!phoneRegex.test(phone)) {
-        document.getElementById("validatePhone").innerHTML = "Enter a valid 10-digit phone number";
-        isValid = false;
-    }
+  // SUCCESS MESSAGE (DYNAMIC FORM REPLACEMENT)
+  const wrapper = document.getElementById("enquiry-form-containers");
+  wrapper.innerHTML = `
+      <div style="padding:20px; background:#d4edda; border-radius:8px;">
+          <h2>Thank you!</h2>
+          <p>Your enquiry has been submitted successfully. We will respond shortly.</p>
+      </div>
+  `;
 
-    // Enquiry Type
-    if (enquiry === "") {
-        document.getElementById("validateEnquiryType").innerHTML = "Select an enquiry type";
-        isValid = false;
-    }
-
-    // Donation selection
-    if (donate === "") {
-        document.getElementById("validateDonate").innerHTML = "Select a donation preference";
-        isValid = false;
-    }
-
-    // Donation amount required IF donate = yes
-    if (donate === "yes") {
-        document.getElementById("donation-amount-container").style.display = "block";
-
-        if (donationAmount === "") {
-            document.getElementById("validateDonationAmount").innerHTML = "Enter the donation amount";
-            isValid = false;
-        }
-    }
-
-    return isValid;
+  return false; // prevent refresh
 }
     
    
